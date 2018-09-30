@@ -15,7 +15,7 @@ class TaskViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "My TableVeiew"
+        navigationItem.title = "Task List"
         tableView.register(MyCell.self, forCellReuseIdentifier: "cellId")
         tableView.register(Header.self, forHeaderFooterViewReuseIdentifier: "headerId")
         
@@ -34,7 +34,7 @@ class TaskViewController: UITableViewController {
     }
     
     @objc func insert() {
-        let alert = UIAlertController(title: "Add Stand?", message: "Enter Stand Name", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Add Task", message: "Enter Task Name", preferredStyle: UIAlertControllerStyle.alert)
         alert.addTextField()
         alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { (action: UIAlertAction!) in
             if let str = alert.textFields![0].text{
@@ -91,9 +91,9 @@ class Header: UITableViewHeaderFooterView{
     
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Sample Header"
+        label.text = "Tasks"
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.boldSystemFont(ofSize: 32)
+        label.font = UIFont.boldSystemFont(ofSize: 22)
         return label
     }()
     
