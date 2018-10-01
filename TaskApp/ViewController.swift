@@ -11,10 +11,15 @@ import UIKit
 class TaskViewController: UITableViewController {
     
     var items = ["Item 1", "Item 2", "Item 3"]
+    var dueDate = ["Date 1", "Date 2", "Date 3"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        StartUp()
+        Set()
+    }
+    
+    func StartUp(){
         navigationItem.title = "Task List"
         tableView.register(MyCell.self, forCellReuseIdentifier: "cellId")
         tableView.register(Header.self, forHeaderFooterViewReuseIdentifier: "headerId")
@@ -22,23 +27,44 @@ class TaskViewController: UITableViewController {
         tableView.sectionHeaderHeight = 50
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(TaskViewController.insert))
-        if let x = UserDefaults.standard.array(forKey: "Array") {
+    }
+    
+    func Set(){
+        if let x = UserDefaults.standard.array(forKey: "ArrayTasks") {
             items.removeAll()
             items = x as! [String]
         }
+        if let x = UserDefaults.standard.array(forKey: "ArrayDate") {
+            dueDate.removeAll()
+            dueDate = x as! [String]
+        }
     }
-
     
     func Save() {
-        UserDefaults.standard.set(items, forKey: "Array")
+        UserDefaults.standard.set(items, forKey: "ArrayTasks")
+        UserDefaults.standard.set(dueDate, forKey: "ArrayDate")
     }
     
     @objc func insert() {
         let alert = UIAlertController(title: "Add Task", message: "Enter Task Name", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addTextField()
+        alert.addTextField{ (textField: UITextField) in
+            textField.placeholder = "Enter Task Name"
+            textField.keyboardType = .default
+            textField.keyboardAppearance = .dark
+            textField.textColor = .blue
+        }
+        alert.addTextField{ (textField: UITextField) in
+            textField.placeholder = "Enter Due Date"
+            textField.keyboardType = .default
+            textField.keyboardAppearance = .dark
+            textField.textColor = .blue
+        }
         alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { (action: UIAlertAction!) in
-            if let str = alert.textFields![0].text{
-                self.items.append(str)
+            if let task = alert.textFields![0].text{
+                self.items.append(task)
+            }
+            if let date = alert.textFields![1].text{
+                self.dueDate.append(date)
             }
             let insertIndexPath = NSIndexPath(row: self.items.count - 1, section: 0)
             self.tableView.insertRows(at: [insertIndexPath as IndexPath], with: .automatic)
@@ -59,6 +85,7 @@ class TaskViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let myCell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! MyCell
         myCell.nameLabel.text = items[indexPath.row]
+        myCell.timeLabel.text = dueDate[indexPath.row]
         myCell.myTableViewController = self
         return myCell
     }
@@ -67,10 +94,46 @@ class TaskViewController: UITableViewController {
         return tableView.dequeueReusableHeaderFooterView(withIdentifier: "headerId")
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alert = UIAlertController(title: "Update Task", message: "Edit Task Name", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addTextField{ (textField: UITextField) in
+            textField.text = self.items[indexPath.row]
+            textField.keyboardType = .default
+            textField.keyboardAppearance = .dark
+            textField.textColor = .blue
+        }
+        alert.addTextField{ (textField: UITextField) in
+            textField.text = self.dueDate[indexPath.row]
+            textField.keyboardType = .default
+            textField.keyboardAppearance = .dark
+            textField.textColor = .blue
+        }
+        alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { (action: UIAlertAction!) in
+            if let task = alert.textFields![0].text{
+                self.items.remove(at: indexPath.row)
+                self.items.insert(task, at: indexPath.row)
+            }
+            if let date = alert.textFields![1].text{
+                self.dueDate.remove(at: indexPath.row)
+                self.dueDate.insert(date, at: indexPath.row)
+            }
+            //let insertIndexPath = NSIndexPath(row: self.items.count - 1, section: 0)
+            tableView.reloadData()
+            self.Save()
+            
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+            
+        }))
+        UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+    }
+    
+    
     func deleteCell(cell: UITableViewCell) {
         
         if let deletionIndexPath = tableView.indexPath(for: cell){
             items.remove(at: deletionIndexPath.row)
+            dueDate.remove(at: deletionIndexPath.row)
             tableView.deleteRows(at: [deletionIndexPath], with: .automatic)
         }
         Save()
@@ -97,11 +160,20 @@ class Header: UITableViewHeaderFooterView{
         return label
     }()
     
+    let dateLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Date Due"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.boldSystemFont(ofSize: 22)
+        return label
+    }()
+    
     func setupViews(){
         addSubview(nameLabel)
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
+        addSubview(dateLabel)
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-12-[v0][v1(140)]-75-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel, "v1": dateLabel]))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
-        
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": dateLabel]))
     }
 }
 
@@ -125,6 +197,14 @@ class MyCell: UITableViewCell {
         return label
     }()
     
+    let timeLabel: UILabel = {
+        let textLabel = UILabel()
+        textLabel.text = "Sample Text"
+        textLabel.translatesAutoresizingMaskIntoConstraints = false
+        textLabel.font = UIFont.boldSystemFont(ofSize: 16)
+        return textLabel
+    }()
+    
     let actionButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Finished", for: .normal)
@@ -136,14 +216,16 @@ class MyCell: UITableViewCell {
     
     func setupViews(){
         addSubview(nameLabel)
+        addSubview(timeLabel)
         addSubview(actionButton)
         
         actionButton.addTarget(self, action: #selector(MyCell.handleAction), for: .touchUpInside)
         
         
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[v0]-8-[v1(80)]-8-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel, "v1": actionButton]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[v0]-12-[v1(90)]-32-[v2(80)]-8-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel, "v1": timeLabel, "v2": actionButton]))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": actionButton]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": timeLabel]))
         
         
     }
