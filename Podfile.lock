@@ -1,0 +1,20 @@
+PODS:
+  - BulletinBoard (2.0.2)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - BulletinBoard
+  - SVProgressHUD
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - BulletinBoard
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  BulletinBoard: a4a3022789e5202167127c3231975313c1d76c51
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 605ff1c499966a2f1440d7eb228a0c19e2b7225e
+
+COCOAPODS: 1.5.3
