@@ -93,6 +93,8 @@ class TaskViewController: UITableViewController {
     @objc func insert(){
 
         page.actionButtonTitle = "SAVE"
+        page.textFieldString = ""
+        page.textFieldString1 = ""
         page.actionHandler = { (item:BLTNActionItem) in
             if let str = self.page.textField.text {
             self.items.append(str)
@@ -136,41 +138,64 @@ class TaskViewController: UITableViewController {
         return tableView.dequeueReusableHeaderFooterView(withIdentifier: "headerId")
     }
     
-    
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let alert = UIAlertController(title: "Update Task", message: "Edit Task Name", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addTextField{ (textField: UITextField) in
-            textField.text = self.items[indexPath.row]
-            textField.keyboardType = .default
-            textField.keyboardAppearance = .dark
-            textField.textColor = .blue
-        }
-        alert.addTextField{ (textField: UITextField) in
-            textField.text = self.dueDate[indexPath.row]
-            textField.keyboardType = .default
-            textField.keyboardAppearance = .dark
-            textField.textColor = .blue
-        }
-        alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { (action: UIAlertAction!) in
-            if let task = alert.textFields![0].text{
+        setupPage.actionButtonTitle = "SAVE"
+        setupPage.textFieldString = items[indexPath.row]
+        setupPage.textFieldString1 = dueDate[indexPath.row]
+        setupPage.actionHandler = { (item:BLTNActionItem) in
+            if let task = self.setupPage.textField.text {
                 self.items.remove(at: indexPath.row)
                 self.items.insert(task, at: indexPath.row)
             }
-            if let date = alert.textFields![1].text{
+            if let date = self.setupPage.textField1.text {
                 self.dueDate.remove(at: indexPath.row)
                 self.dueDate.insert(date, at: indexPath.row)
             }
-            //let insertIndexPath = NSIndexPath(row: self.items.count - 1, section: 0)
             tableView.reloadData()
             self.Save()
-
-        }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
-
-        }))
-        UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+            self.bulletinManager2.dismissBulletin()
+        }
+        setupPage.alternativeButtonTitle = "Cancel"
+        setupPage.alternativeHandler = { (item:BLTNActionItem) in
+            self.bulletinManager2.dismissBulletin()
+        }
+        setupPage.isDismissable = false
+        bulletinManager2.showBulletin(above: self)
     }
+    
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let alert = UIAlertController(title: "Update Task", message: "Edit Task Name", preferredStyle: UIAlertControllerStyle.alert)
+//        alert.addTextField{ (textField: UITextField) in
+//            textField.text = self.items[indexPath.row]
+//            textField.keyboardType = .default
+//            textField.keyboardAppearance = .dark
+//            textField.textColor = .blue
+//        }
+//        alert.addTextField{ (textField: UITextField) in
+//            textField.text = self.dueDate[indexPath.row]
+//            textField.keyboardType = .default
+//            textField.keyboardAppearance = .dark
+//            textField.textColor = .blue
+//        }
+//        alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { (action: UIAlertAction!) in
+//            if let task = alert.textFields![0].text{
+//                self.items.remove(at: indexPath.row)
+//                self.items.insert(task, at: indexPath.row)
+//            }
+//            if let date = alert.textFields![1].text{
+//                self.dueDate.remove(at: indexPath.row)
+//                self.dueDate.insert(date, at: indexPath.row)
+//            }
+//            //let insertIndexPath = NSIndexPath(row: self.items.count - 1, section: 0)
+//            tableView.reloadData()
+//            self.Save()
+//
+//        }))
+//        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+//
+//        }))
+//        UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+//    }
     
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
         return .none
