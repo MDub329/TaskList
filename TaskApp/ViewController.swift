@@ -7,17 +7,60 @@
 //
 
 import UIKit
+import BLTNBoard
+import SVProgressHUD
 
 class TaskViewController: UITableViewController {
     
     var items = ["Item 1", "Item 2", "Item 3"]
     var dueDate = ["Date 1", "Date 2", "Date 3"]
     
+    let page = TextFieldBLTNPage(title: "Add Task")
+    let setupPage = TextFieldBLTNPage(title: "Edit Task")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         StartUp()
         Set()
+        //bltnPageTest.next = page
+
+        
+        //self.tableView.isEditing = true //DidSelectRowAt stops working when this is enabled
     }
+    
+    lazy var bulletinManager: BLTNItemManager = {
+        let rootItem: BLTNItem = page
+        
+        return BLTNItemManager(rootItem: rootItem)
+    }()
+    
+    lazy var bulletinManager2: BLTNItemManager = {
+        let rootItem: BLTNItem = setupPage
+        
+        return BLTNItemManager(rootItem: rootItem)
+    }()
+    
+//    let bltnPageTest: BLTNPageItem = {
+//        let str = "Test"
+//        let pageItem = BLTNPageItem(title: "BLTN TEST")
+//        pageItem.descriptionText = "Test Description"
+//        pageItem.actionButtonTitle = "GO"
+//        pageItem.appearance.actionButtonColor = .green
+//        pageItem.actionHandler = { (item:BLTNActionItem) in
+//            pageItem.manager?.displayActivityIndicator()
+//
+//            pageItem.manager?.displayNextItem()
+//
+//        }
+//
+//        return pageItem
+//    }()
+
+    
+    
+
+    
+    
     
     func StartUp(){
         navigationItem.title = "Task List"
@@ -26,7 +69,9 @@ class TaskViewController: UITableViewController {
         
         tableView.sectionHeaderHeight = 50
         
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(TaskViewController.insert))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Clear All", style: .plain, target: self, action: #selector(TaskViewController.clear))
     }
     
     func Set(){
@@ -45,38 +90,35 @@ class TaskViewController: UITableViewController {
         UserDefaults.standard.set(dueDate, forKey: "ArrayDate")
     }
     
-    @objc func insert() {
-        let alert = UIAlertController(title: "Add Task", message: "Enter Task Name", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addTextField{ (textField: UITextField) in
-            textField.placeholder = "Enter Task Name"
-            textField.keyboardType = .default
-            textField.keyboardAppearance = .dark
-            textField.textColor = .blue
-        }
-        alert.addTextField{ (textField: UITextField) in
-            textField.placeholder = "Enter Due Date"
-            textField.keyboardType = .default
-            textField.keyboardAppearance = .dark
-            textField.textColor = .blue
-        }
-        alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { (action: UIAlertAction!) in
-            if let task = alert.textFields![0].text{
-                self.items.append(task)
+    @objc func insert(){
+
+        page.actionButtonTitle = "SAVE"
+        page.actionHandler = { (item:BLTNActionItem) in
+            if let str = self.page.textField.text {
+            self.items.append(str)
             }
-            if let date = alert.textFields![1].text{
-                self.dueDate.append(date)
+            if let str2 = self.page.textField1.text {
+                self.dueDate.append(str2)
             }
             let insertIndexPath = NSIndexPath(row: self.items.count - 1, section: 0)
             self.tableView.insertRows(at: [insertIndexPath as IndexPath], with: .automatic)
             self.Save()
-
-        }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
-            
-        }))
-        UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
-        
+            self.bulletinManager.dismissBulletin()
+        }
+        page.alternativeButtonTitle = "Cancel"
+        page.alternativeHandler = { (item:BLTNActionItem) in
+            self.bulletinManager.dismissBulletin()
+        }
+        page.isDismissable = false
+        bulletinManager.showBulletin(above: self)
     }
+    
+    @objc func clear(){
+        items.removeAll()
+        dueDate.removeAll()
+        tableView.reloadData()
+    }
+
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
@@ -93,6 +135,8 @@ class TaskViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return tableView.dequeueReusableHeaderFooterView(withIdentifier: "headerId")
     }
+    
+    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let alert = UIAlertController(title: "Update Task", message: "Edit Task Name", preferredStyle: UIAlertControllerStyle.alert)
@@ -120,15 +164,34 @@ class TaskViewController: UITableViewController {
             //let insertIndexPath = NSIndexPath(row: self.items.count - 1, section: 0)
             tableView.reloadData()
             self.Save()
-            
+
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
-            
+
         }))
         UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
     }
     
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return .none
+    }
     
+    override func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let movedObjectItems = self.items[sourceIndexPath.row]
+        let movedObjectDates = self.dueDate[sourceIndexPath.row]
+        
+        items.remove(at: sourceIndexPath.row)
+        dueDate.remove(at: sourceIndexPath.row)
+        
+        items.insert(movedObjectItems, at: destinationIndexPath.row)
+        dueDate.insert(movedObjectDates, at: destinationIndexPath.row)
+        self.Save()
+    }
+
     func deleteCell(cell: UITableViewCell) {
         
         if let deletionIndexPath = tableView.indexPath(for: cell){
@@ -139,8 +202,6 @@ class TaskViewController: UITableViewController {
         Save()
     }
 }
-
-
 
 class Header: UITableViewHeaderFooterView{
     override init(reuseIdentifier: String?) {
@@ -222,7 +283,7 @@ class MyCell: UITableViewCell {
         actionButton.addTarget(self, action: #selector(MyCell.handleAction), for: .touchUpInside)
         
         
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[v0]-12-[v1(90)]-32-[v2(80)]-8-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel, "v1": timeLabel, "v2": actionButton]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[v0(140)]-38-[v1(90)]-12-[v2(80)]-38-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel, "v1": timeLabel, "v2": actionButton]))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": actionButton]))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": timeLabel]))
@@ -235,8 +296,14 @@ class MyCell: UITableViewCell {
         
     }
     
-    
-    
-    
-    
 }
+
+
+
+
+
+
+
+
+
+
