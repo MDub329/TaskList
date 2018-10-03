@@ -22,6 +22,9 @@ class TaskViewController: UITableViewController {
         super.viewDidLoad()
         StartUp()
         Set()
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        tableView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        
     }
     
     lazy var bulletinManager: BLTNItemManager = {
@@ -90,6 +93,7 @@ class TaskViewController: UITableViewController {
     @objc func clear(){
         items.removeAll()
         dueDate.removeAll()
+        Save()
         tableView.reloadData()
     }
 
@@ -105,11 +109,14 @@ class TaskViewController: UITableViewController {
         myCell.nameLabel.text = items[indexPath.row]
         myCell.timeLabel.text = dueDate[indexPath.row]
         myCell.myTableViewController = self
+        myCell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         return myCell
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return tableView.dequeueReusableHeaderFooterView(withIdentifier: "headerId")
+        let myHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "headerId") as! Header
+        myHeader.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+        return myHeader
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -255,9 +262,7 @@ class MyCell: UITableViewCell {
     
     @objc func handleAction() {
         myTableViewController?.deleteCell(cell: self)
-        
     }
-    
 }
 
 
