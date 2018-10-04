@@ -10,10 +10,12 @@ import UIKit
 import BLTNBoard
 import SVProgressHUD
 
-class TaskViewController: UITableViewController {
+class TaskViewController: UITableViewController{
     
     var items = ["Item 1", "Item 2", "Item 3"]
     var dueDate = ["Date 1", "Date 2", "Date 3"]
+    
+    let bgColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     
     let page = TextFieldBLTNPage(title: "Add Task")
     let setupPage = TextFieldBLTNPage(title: "Edit Task")
@@ -22,8 +24,8 @@ class TaskViewController: UITableViewController {
         super.viewDidLoad()
         StartUp()
         Set()
-        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        tableView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        navigationController?.navigationBar.barTintColor = bgColor
+        tableView.backgroundColor = bgColor
         
     }
     
@@ -44,8 +46,12 @@ class TaskViewController: UITableViewController {
         tableView.register(MyCell.self, forCellReuseIdentifier: "cellId")
         tableView.register(Header.self, forHeaderFooterViewReuseIdentifier: "headerId")
         tableView.sectionHeaderHeight = 50
+        tableView.separatorStyle = .none
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(TaskViewController.insert))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(TaskViewController.insert))
+        //navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(TaskViewController.clear))
+        
+        //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(TaskViewController.insert))
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Clear All", style: .plain, target: self, action: #selector(TaskViewController.clear))
     }
     
@@ -103,21 +109,26 @@ class TaskViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
+    
+    
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let myCell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! MyCell
         myCell.nameLabel.text = items[indexPath.row]
         myCell.timeLabel.text = dueDate[indexPath.row]
         myCell.myTableViewController = self
-        myCell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        myCell.backgroundColor = bgColor
         return myCell
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let myHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "headerId") as! Header
-        myHeader.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+        myHeader.backgroundView = UIView(frame: myHeader.bounds)
+        myHeader.backgroundView?.backgroundColor = bgColor
         return myHeader
     }
+    
+    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         setupPage.actionButtonTitle = "SAVE"
@@ -185,6 +196,7 @@ class Header: UITableViewHeaderFooterView{
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "Tasks"
@@ -204,9 +216,15 @@ class Header: UITableViewHeaderFooterView{
     func setupViews(){
         addSubview(nameLabel)
         addSubview(dateLabel)
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-12-[v0][v1(140)]-75-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel, "v1": dateLabel]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": dateLabel]))
+        
+        nameLabel.anchor(top: self.safeAreaLayoutGuide.topAnchor, leading: self.leadingAnchor, bottom: self.safeAreaLayoutGuide.bottomAnchor, trailing: nil, padding: .init(top: 5, left: 15, bottom: 5, right: 5), size: .init(width: 100, height: 20))
+        //dateLabel.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 5, left: 0, bottom: 5, right: 0))
+        dateLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        dateLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        
+//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-12-[v0][v1(140)]-75-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel, "v1": dateLabel]))
+//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
+//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": dateLabel]))
     }
 }
 
@@ -216,6 +234,8 @@ class MyCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViews()
+        setUpBorder()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -241,6 +261,8 @@ class MyCell: UITableViewCell {
     let actionButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Finished", for: .normal)
+        //let btnImage = UIImage(named: "trashCanIcon.png")
+        //button.setImage(btnImage, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     } ()
@@ -251,13 +273,28 @@ class MyCell: UITableViewCell {
         addSubview(actionButton)
         
         actionButton.addTarget(self, action: #selector(MyCell.handleAction), for: .touchUpInside)
+
+        nameLabel.anchor(top: self.topAnchor, leading: self.leadingAnchor, bottom: self.bottomAnchor, trailing: nil, padding: .init(top: 5, left: 15, bottom: 5, right: 0))
+        //timeLabel.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 5, left: 0, bottom: 5, right: 0))
+        timeLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        timeLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        actionButton.anchor(top: self.topAnchor, leading: nil, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 5, left: 0, bottom: 5, right: 15))
         
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[v0(140)]-38-[v1(90)]-12-[v2(80)]-38-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel, "v1": timeLabel, "v2": actionButton]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": actionButton]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": timeLabel]))
+//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[v0(140)]-38-[v1(90)]-12-[v2(80)]-38-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel, "v1": timeLabel, "v2": actionButton]))
+//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
+//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": actionButton]))
+//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": timeLabel]))
+    }
+    
+    func setUpBorder() {
         
-        
+        self.layer.masksToBounds = true
+        self.layer.borderWidth = 1
+        self.layer.borderColor = #colorLiteral(red: 0.9759812116, green: 1, blue: 0.983512733, alpha: 1)
+        self.layer.cornerRadius = 5
+//        self.layer.shadowOffset = CGSize(width: 1, height: 2)
+//        self.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//        self.layer.shadowRadius = 8
     }
     
     @objc func handleAction() {
