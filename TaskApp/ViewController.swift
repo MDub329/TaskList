@@ -15,19 +15,25 @@ class TaskViewController: UITableViewController{
     var items = ["Item 1", "Item 2", "Item 3"]
     var dueDate = ["Date 1", "Date 2", "Date 3"]
     
-    let bgColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    let bgColor = #colorLiteral(red: 0.2100980884, green: 0.2274777916, blue: 0.2527261832, alpha: 1)
+    let accentBGColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+    let textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     
     let page = TextFieldBLTNPage(title: "Add Task")
     let setupPage = TextFieldBLTNPage(title: "Edit Task")
+    var globalFooterLabel = UILabel() //Gain access to footer Total
     
     override func viewDidLoad() {
         super.viewDidLoad()
         StartUp()
         Set()
-        navigationController?.navigationBar.barTintColor = bgColor
+        
+        navigationController?.navigationBar.barTintColor = accentBGColor
+        
         tableView.backgroundColor = bgColor
         
     }
+ 
     
     lazy var bulletinManager: BLTNItemManager = {
         let rootItem: BLTNItem = page
@@ -43,16 +49,19 @@ class TaskViewController: UITableViewController{
 
     func StartUp(){
         navigationItem.title = "Task List"
+        let textAttributes = [NSAttributedStringKey.foregroundColor:textColor]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        navigationController?.navigationBar.barStyle = .black
         tableView.register(MyCell.self, forCellReuseIdentifier: "cellId")
         tableView.register(Header.self, forHeaderFooterViewReuseIdentifier: "headerId")
+        tableView.register(Footer.self, forHeaderFooterViewReuseIdentifier: "footerId")
         tableView.sectionHeaderHeight = 50
+        tableView.sectionFooterHeight = 65
         tableView.separatorStyle = .none
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(TaskViewController.insert))
-        //navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(TaskViewController.clear))
-        
-        //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(TaskViewController.insert))
+        navigationItem.rightBarButtonItem?.tintColor = textColor
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Clear All", style: .plain, target: self, action: #selector(TaskViewController.clear))
+        navigationItem.leftBarButtonItem?.tintColor = textColor
     }
     
     func Set(){
@@ -71,6 +80,7 @@ class TaskViewController: UITableViewController{
         UserDefaults.standard.set(dueDate, forKey: "ArrayDate")
     }
     
+    
     @objc func insert(){
 
         page.actionButtonTitle = "SAVE"
@@ -87,6 +97,9 @@ class TaskViewController: UITableViewController{
             self.tableView.insertRows(at: [insertIndexPath as IndexPath], with: .automatic)
             self.Save()
             self.bulletinManager.dismissBulletin()
+            //update footer Count
+            let total = String(self.items.count)
+            self.globalFooterLabel.text = "Total Tasks Left: \(total)"
         }
         page.alternativeButtonTitle = "Cancel"
         page.alternativeHandler = { (item:BLTNActionItem) in
@@ -104,12 +117,11 @@ class TaskViewController: UITableViewController{
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 40
+        return 80
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
-    
     
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -117,7 +129,10 @@ class TaskViewController: UITableViewController{
         myCell.nameLabel.text = items[indexPath.row]
         myCell.timeLabel.text = dueDate[indexPath.row]
         myCell.myTableViewController = self
-        myCell.backgroundColor = bgColor
+        myCell.floatView.backgroundColor = accentBGColor
+        myCell.timeLabel.textColor = textColor
+        myCell.nameLabel.textColor = textColor
+        myCell.actionButton.setTitleColor(textColor, for: .normal)
         return myCell
     }
     
@@ -125,10 +140,22 @@ class TaskViewController: UITableViewController{
         let myHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "headerId") as! Header
         myHeader.backgroundView = UIView(frame: myHeader.bounds)
         myHeader.backgroundView?.backgroundColor = bgColor
+        myHeader.dateLabel.textColor = textColor
+        myHeader.nameLabel.textColor = textColor
+        
         return myHeader
     }
     
-    
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let myFooter = tableView.dequeueReusableHeaderFooterView(withIdentifier: "footerId") as! Footer
+        let total = String(items.count)
+        myFooter.backgroundView = UIView(frame: myFooter.bounds)
+        myFooter.backgroundView?.backgroundColor = bgColor
+        globalFooterLabel = myFooter.totalLabel
+        myFooter.totalLabel.textColor = textColor
+        myFooter.totalLabel.text = "Total Tasks Left: \(total)"
+        return myFooter
+    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         setupPage.actionButtonTitle = "SAVE"
@@ -150,6 +177,7 @@ class TaskViewController: UITableViewController{
         setupPage.alternativeButtonTitle = "Cancel"
         setupPage.alternativeHandler = { (item:BLTNActionItem) in
             self.bulletinManager2.dismissBulletin()
+            tableView.deselectRow(at: indexPath, animated: false)
         }
         setupPage.isDismissable = false
         bulletinManager2.showBulletin(above: self)
@@ -181,133 +209,12 @@ class TaskViewController: UITableViewController{
             items.remove(at: deletionIndexPath.row)
             dueDate.remove(at: deletionIndexPath.row)
             tableView.deleteRows(at: [deletionIndexPath], with: .automatic)
+            //update Footer Count
+            let total = String(items.count)
+            globalFooterLabel.text = "Total Tasks Left: \(total)"
         }
         Save()
     }
+    
 }
-
-class Header: UITableViewHeaderFooterView{
-    override init(reuseIdentifier: String?) {
-        super.init(reuseIdentifier: reuseIdentifier)
-        setupViews()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
-    let nameLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Tasks"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.boldSystemFont(ofSize: 22)
-        return label
-    }()
-    
-    let dateLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Date Due"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.boldSystemFont(ofSize: 22)
-        return label
-    }()
-    
-    func setupViews(){
-        addSubview(nameLabel)
-        addSubview(dateLabel)
-        
-        nameLabel.anchor(top: self.safeAreaLayoutGuide.topAnchor, leading: self.leadingAnchor, bottom: self.safeAreaLayoutGuide.bottomAnchor, trailing: nil, padding: .init(top: 5, left: 15, bottom: 5, right: 5), size: .init(width: 100, height: 20))
-        //dateLabel.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 5, left: 0, bottom: 5, right: 0))
-        dateLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        dateLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        
-//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-12-[v0][v1(140)]-75-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel, "v1": dateLabel]))
-//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
-//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": dateLabel]))
-    }
-}
-
-class MyCell: UITableViewCell {
-   
-    var myTableViewController: TaskViewController?
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setupViews()
-        setUpBorder()
-        
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    let nameLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Sample Label"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        return label
-    }()
-    
-    let timeLabel: UILabel = {
-        let textLabel = UILabel()
-        textLabel.text = "Sample Text"
-        textLabel.translatesAutoresizingMaskIntoConstraints = false
-        textLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        return textLabel
-    }()
-    
-    let actionButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Finished", for: .normal)
-        //let btnImage = UIImage(named: "trashCanIcon.png")
-        //button.setImage(btnImage, for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    } ()
-    
-    func setupViews(){
-        addSubview(nameLabel)
-        addSubview(timeLabel)
-        addSubview(actionButton)
-        
-        actionButton.addTarget(self, action: #selector(MyCell.handleAction), for: .touchUpInside)
-
-        nameLabel.anchor(top: self.topAnchor, leading: self.leadingAnchor, bottom: self.bottomAnchor, trailing: nil, padding: .init(top: 5, left: 15, bottom: 5, right: 0))
-        //timeLabel.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 5, left: 0, bottom: 5, right: 0))
-        timeLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        timeLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        actionButton.anchor(top: self.topAnchor, leading: nil, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 5, left: 0, bottom: 5, right: 15))
-        
-//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[v0(140)]-38-[v1(90)]-12-[v2(80)]-38-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel, "v1": timeLabel, "v2": actionButton]))
-//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
-//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": actionButton]))
-//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": timeLabel]))
-    }
-    
-    func setUpBorder() {
-        
-        self.layer.masksToBounds = true
-        self.layer.borderWidth = 1
-        self.layer.borderColor = #colorLiteral(red: 0.9759812116, green: 1, blue: 0.983512733, alpha: 1)
-        self.layer.cornerRadius = 5
-//        self.layer.shadowOffset = CGSize(width: 1, height: 2)
-//        self.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-//        self.layer.shadowRadius = 8
-    }
-    
-    @objc func handleAction() {
-        myTableViewController?.deleteCell(cell: self)
-    }
-}
-
-
-
-
-
-
-
-
-
 
