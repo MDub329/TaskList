@@ -8,6 +8,7 @@
 
 import Foundation
 import BLTNBoard
+import UIKit
 
 class TextFieldBLTNPage: BLTNPageItem {
     var textField = UITextField()
@@ -15,24 +16,25 @@ class TextFieldBLTNPage: BLTNPageItem {
     var textFieldString = "Holder"
     var textFieldString1 = "Holder1"
     
-    //    override func makeViewsUnderDescription(with interfaceBuilder: BLTNInterfaceBuilder) -> [UIView]? {
-    //        textField = interfaceBuilder.makeTextField(placeholder: "TEST PLACE HOLDER", returnKey: .done, delegate: self as? UITextFieldDelegate)
-    //        textField.textColor = .blue
-    //        //change textField here
-    //        return [textField]
-    //    }
-    
     override func makeViewsUnderTitle(with interfaceBuilder: BLTNInterfaceBuilder) -> [UIView]? {
         
         textField = interfaceBuilder.makeTextField(placeholder: "Enter Task Name", returnKey: .done, delegate: self as? UITextFieldDelegate)
         textField.text = textFieldString
-        textField.textColor = .red
-        textField1 = interfaceBuilder.makeTextField(placeholder: "Enter Due Date", returnKey: .done, delegate: self as? UITextFieldDelegate)
-        textField1.text = textFieldString1
-        textField1.textColor = .blue
-        return [textField, textField1]
+        //textField.textColor = .red
+//        textField1 = interfaceBuilder.makeTextField(placeholder: "Enter Due Date", returnKey: .done, delegate: self as? UITextFieldDelegate)
+//        textField1.text = textFieldString1
+        //textField1.textColor = .blue
+        return [textField]
     }
+}
+
+class DueDatePicker: BLTNPageItem {
     
+    let datePicker = UIDatePicker()
     
-    
+    override func makeViewsUnderTitle(with interfaceBuilder: BLTNInterfaceBuilder) -> [UIView]? {
+        datePicker.datePickerMode = .date
+        datePicker.date = Date()
+        return [datePicker]
+    }
 }

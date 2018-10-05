@@ -16,33 +16,42 @@ class TaskViewController: UITableViewController{
     var dueDate = ["Date 1", "Date 2", "Date 3"]
     
     let bgColor = #colorLiteral(red: 0.2100980884, green: 0.2274777916, blue: 0.2527261832, alpha: 1)
-    let accentBGColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+    let accentBGColor = #colorLiteral(red: 0.6673049983, green: 0, blue: 0.03121174827, alpha: 0.6015625)
     let textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     
-    let page = TextFieldBLTNPage(title: "Add Task")
-    let setupPage = TextFieldBLTNPage(title: "Edit Task")
+    let addPage = TextFieldBLTNPage(title: "Add Task")
+    let editPage = TextFieldBLTNPage(title: "Edit Task")
+    let dueDatePage = DueDatePicker(title: "Pick Due Date")
+    let editDueDatePage = DueDatePicker(title: "Edit Due Date")
     var globalFooterLabel = UILabel() //Gain access to footer Total
+    
+    let cellId = "cellId"
+    let headerId = "headerId"
+    let footerId = "footerId"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         StartUp()
         Set()
-        
+//        self.tableView.isEditing = true
+//        self.tableView.allowsSelectionDuringEditing = true
         navigationController?.navigationBar.barTintColor = accentBGColor
-        
         tableView.backgroundColor = bgColor
-        
+        setUpAddPage()
+        setUpEditPage()
+        setUpDatePicker()
+        setUPEditDatePicker()
     }
  
     
     lazy var bulletinManager: BLTNItemManager = {
-        let rootItem: BLTNItem = page
+        let rootItem: BLTNItem = addPage
         
         return BLTNItemManager(rootItem: rootItem)
     }()
     
     lazy var bulletinManager2: BLTNItemManager = {
-        let rootItem: BLTNItem = setupPage
+        let rootItem: BLTNItem = editPage
         
         return BLTNItemManager(rootItem: rootItem)
     }()
@@ -52,9 +61,9 @@ class TaskViewController: UITableViewController{
         let textAttributes = [NSAttributedStringKey.foregroundColor:textColor]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         navigationController?.navigationBar.barStyle = .black
-        tableView.register(MyCell.self, forCellReuseIdentifier: "cellId")
-        tableView.register(Header.self, forHeaderFooterViewReuseIdentifier: "headerId")
-        tableView.register(Footer.self, forHeaderFooterViewReuseIdentifier: "footerId")
+        tableView.register(MyCell.self, forCellReuseIdentifier: cellId)
+        tableView.register(Header.self, forHeaderFooterViewReuseIdentifier: headerId)
+        tableView.register(Footer.self, forHeaderFooterViewReuseIdentifier: footerId)
         tableView.sectionHeaderHeight = 50
         tableView.sectionFooterHeight = 65
         tableView.separatorStyle = .none
@@ -83,29 +92,20 @@ class TaskViewController: UITableViewController{
     
     @objc func insert(){
 
-        page.actionButtonTitle = "SAVE"
-        page.textFieldString = ""
-        page.textFieldString1 = ""
-        page.actionHandler = { (item:BLTNActionItem) in
-            if let str = self.page.textField.text {
-            self.items.append(str)
+        addPage.actionButtonTitle = "Next"
+        addPage.textFieldString = ""
+        addPage.textFieldString1 = ""
+        addPage.actionHandler = { (item:BLTNActionItem) in
+            if let str = self.addPage.textField.text {
+                self.items.append(str)
             }
-            if let str2 = self.page.textField1.text {
-                self.dueDate.append(str2)
-            }
-            let insertIndexPath = NSIndexPath(row: self.items.count - 1, section: 0)
-            self.tableView.insertRows(at: [insertIndexPath as IndexPath], with: .automatic)
-            self.Save()
-            self.bulletinManager.dismissBulletin()
-            //update footer Count
-            let total = String(self.items.count)
-            self.globalFooterLabel.text = "Total Tasks Left: \(total)"
+            self.bulletinManager.displayNextItem()
         }
-        page.alternativeButtonTitle = "Cancel"
-        page.alternativeHandler = { (item:BLTNActionItem) in
+        addPage.alternativeButtonTitle = "Cancel"
+        addPage.alternativeHandler = { (item:BLTNActionItem) in
             self.bulletinManager.dismissBulletin()
         }
-        page.isDismissable = false
+        addPage.isDismissable = false
         bulletinManager.showBulletin(above: self)
     }
     
@@ -114,6 +114,51 @@ class TaskViewController: UITableViewController{
         dueDate.removeAll()
         Save()
         tableView.reloadData()
+    }
+    
+    func setUpDatePicker() {
+        dueDatePage.actionButtonTitle = "Save"
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = "MM-dd-YY"
+        dueDatePage.actionHandler = { (item:BLTNActionItem) in
+            let dateString = dateFormat.string(from: self.dueDatePage.datePicker.date)
+            self.dueDate.append(dateString)
+            let insertIndexPath = NSIndexPath(row: self.items.count - 1, section: 0)
+            self.tableView.insertRows(at: [insertIndexPath as IndexPath], with: .automatic)
+            self.Save()
+            let total = String(self.items.count)
+            self.globalFooterLabel.text = "Total Tasks Left: \(total)"
+            self.bulletinManager.dismissBulletin()
+        }
+        dueDatePage.isDismissable = false
+        dueDatePage.appearance.actionButtonColor = accentBGColor
+        dueDatePage.appearance.titleTextColor = accentBGColor
+    }
+    
+    func setUPEditDatePicker() {
+        editDueDatePage.actionButtonTitle = "Save"
+        editDueDatePage.isDismissable = false
+        editDueDatePage.appearance.actionButtonColor = accentBGColor
+        editDueDatePage.appearance.titleTextColor = accentBGColor
+    }
+    
+    func setUpAddPage() {
+        addPage.appearance.actionButtonColor = accentBGColor
+        addPage.appearance.titleTextColor = accentBGColor
+        addPage.textField.textColor = accentBGColor
+        //addPage.textField1.textColor = accentBGColor
+        addPage.next = dueDatePage
+    }
+    
+    func setUpEditPage() {
+        editPage.appearance.actionButtonColor = accentBGColor
+        editPage.appearance.titleTextColor = accentBGColor
+        editPage.textField.textColor = accentBGColor
+        editPage.textField1.textColor = accentBGColor
+        editPage.next = editDueDatePage
+        editPage.actionButtonTitle = "NEXT"
+        editPage.alternativeButtonTitle = "Cancel"
+         editPage.isDismissable = false
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -125,19 +170,20 @@ class TaskViewController: UITableViewController{
     
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let myCell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! MyCell
+        let myCell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! MyCell
         myCell.nameLabel.text = items[indexPath.row]
         myCell.timeLabel.text = dueDate[indexPath.row]
         myCell.myTableViewController = self
         myCell.floatView.backgroundColor = accentBGColor
         myCell.timeLabel.textColor = textColor
         myCell.nameLabel.textColor = textColor
+        myCell.nameLabel.numberOfLines = 2
         myCell.actionButton.setTitleColor(textColor, for: .normal)
         return myCell
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let myHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "headerId") as! Header
+        let myHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerId) as! Header
         myHeader.backgroundView = UIView(frame: myHeader.bounds)
         myHeader.backgroundView?.backgroundColor = bgColor
         myHeader.dateLabel.textColor = textColor
@@ -147,7 +193,7 @@ class TaskViewController: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let myFooter = tableView.dequeueReusableHeaderFooterView(withIdentifier: "footerId") as! Footer
+        let myFooter = tableView.dequeueReusableHeaderFooterView(withIdentifier: footerId) as! Footer
         let total = String(items.count)
         myFooter.backgroundView = UIView(frame: myFooter.bounds)
         myFooter.backgroundView?.backgroundColor = bgColor
@@ -158,28 +204,34 @@ class TaskViewController: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        setupPage.actionButtonTitle = "SAVE"
-        setupPage.textFieldString = items[indexPath.row]
-        setupPage.textFieldString1 = dueDate[indexPath.row]
-        setupPage.actionHandler = { (item:BLTNActionItem) in
-            if let task = self.setupPage.textField.text {
+        editPage.textFieldString = items[indexPath.row]
+        editPage.textFieldString1 = dueDate[indexPath.row]
+        editPage.actionHandler = { (item:BLTNActionItem) in
+            if let task = self.editPage.textField.text {
                 self.items.remove(at: indexPath.row)
                 self.items.insert(task, at: indexPath.row)
             }
-            if let date = self.setupPage.textField1.text {
+            self.bulletinManager2.displayNextItem()
+            
+            let dateFormat = DateFormatter()
+            dateFormat.dateFormat = "MM-dd-YY"
+            //Set date in datePicker
+            
+            
+            self.editDueDatePage.actionHandler = { (item:BLTNActionItem) in
+                let dateString = dateFormat.string(from: self.editDueDatePage.datePicker.date)
                 self.dueDate.remove(at: indexPath.row)
-                self.dueDate.insert(date, at: indexPath.row)
+                self.dueDate.insert(dateString, at: indexPath.row)
+                self.Save()
+                self.bulletinManager2.dismissBulletin()
+                tableView.reloadData()
             }
-            tableView.reloadData()
-            self.Save()
-            self.bulletinManager2.dismissBulletin()
+            
         }
-        setupPage.alternativeButtonTitle = "Cancel"
-        setupPage.alternativeHandler = { (item:BLTNActionItem) in
+        editPage.alternativeHandler = { (item:BLTNActionItem) in
             self.bulletinManager2.dismissBulletin()
             tableView.deselectRow(at: indexPath, animated: false)
         }
-        setupPage.isDismissable = false
         bulletinManager2.showBulletin(above: self)
     }
     

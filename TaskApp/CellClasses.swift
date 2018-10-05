@@ -55,10 +55,6 @@ class Header: UITableViewHeaderFooterView{
         //dateLabel.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 5, left: 0, bottom: 5, right: 0))
         dateLabel.centerXAnchor.constraint(equalTo: floatView.centerXAnchor).isActive = true
         dateLabel.centerYAnchor.constraint(equalTo: floatView.centerYAnchor).isActive = true
-        
-        //        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-12-[v0][v1(140)]-75-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel, "v1": dateLabel]))
-        //        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
-        //        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": dateLabel]))
     }
 }
 
@@ -68,8 +64,6 @@ class MyCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViews()
-        //setUpBorder()
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -95,8 +89,6 @@ class MyCell: UITableViewCell {
     let actionButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Finished", for: .normal)
-        //let btnImage = UIImage(named: "trashCanIcon.png")
-        //button.setImage(btnImage, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     } ()
@@ -120,7 +112,7 @@ class MyCell: UITableViewCell {
         actionButton.addTarget(self, action: #selector(MyCell.handleAction), for: .touchUpInside)
         
         floatView.anchor(top: self.topAnchor, leading: self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor,padding: .init(top: 10, left: 25, bottom: 10, right: 25))
-        nameLabel.anchor(top: floatView.topAnchor, leading: floatView.leadingAnchor, bottom: floatView.bottomAnchor, trailing: nil, padding: .init(top: 5, left: 15, bottom: 5, right: 0))
+        nameLabel.anchor(top: floatView.topAnchor, leading: floatView.leadingAnchor, bottom: floatView.bottomAnchor, trailing: nil, padding: .init(top: 5, left: 15, bottom: 5, right: 0),size: .init(width: 100, height: 40))
         //timeLabel.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 5, left: 0, bottom: 5, right: 0))
         timeLabel.centerXAnchor.constraint(equalTo: floatView.centerXAnchor).isActive = true
         timeLabel.centerYAnchor.constraint(equalTo: floatView.centerYAnchor).isActive = true
