@@ -20,6 +20,7 @@ class TextFieldBLTNPage: BLTNPageItem {
         
         textField = interfaceBuilder.makeTextField(placeholder: "Enter Task Name", returnKey: .done, delegate: self as? UITextFieldDelegate)
         textField.text = textFieldString
+        
         //textField.textColor = .red
 //        textField1 = interfaceBuilder.makeTextField(placeholder: "Enter Due Date", returnKey: .done, delegate: self as? UITextFieldDelegate)
 //        textField1.text = textFieldString1

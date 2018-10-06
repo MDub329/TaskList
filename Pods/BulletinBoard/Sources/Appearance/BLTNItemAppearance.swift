@@ -103,7 +103,7 @@ extension BLTNItemAppearance {
         if let titleFontDescriptor = self.titleFontDescriptor {
             return UIFont(descriptor: titleFontDescriptor, size: titleFontSize)
         } else {
-            return UIFont.systemFont(ofSize: titleFontSize, weight: UIFontWeightMedium)
+            return UIFont.systemFont(ofSize: titleFontSize, weight: UIFont.Weight.medium)
         }
 
     }
@@ -133,7 +133,7 @@ extension BLTNItemAppearance {
         if let buttonFontDescriptor = self.buttonFontDescriptor {
             return UIFont(descriptor: buttonFontDescriptor, size: actionButtonFontSize)
         } else {
-            return UIFont.systemFont(ofSize: actionButtonFontSize, weight: UIFontWeightSemibold)
+            return UIFont.systemFont(ofSize: actionButtonFontSize, weight: UIFont.Weight.semibold)
         }
 
     }
@@ -147,7 +147,7 @@ extension BLTNItemAppearance {
         if let buttonFontDescriptor = self.buttonFontDescriptor {
             return UIFont(descriptor: buttonFontDescriptor, size: alternativeButtonFontSize)
         } else {
-            return UIFont.systemFont(ofSize: alternativeButtonFontSize, weight: UIFontWeightSemibold)
+            return UIFont.systemFont(ofSize: alternativeButtonFontSize, weight: UIFont.Weight.semibold)
         }
 
     }

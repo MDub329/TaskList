@@ -58,7 +58,7 @@ class TaskViewController: UITableViewController{
 
     func StartUp(){
         navigationItem.title = "Task List"
-        let textAttributes = [NSAttributedStringKey.foregroundColor:textColor]
+        let textAttributes = [NSAttributedString.Key.foregroundColor:textColor]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         navigationController?.navigationBar.barStyle = .black
         tableView.register(MyCell.self, forCellReuseIdentifier: cellId)
@@ -235,7 +235,7 @@ class TaskViewController: UITableViewController{
         bulletinManager2.showBulletin(above: self)
     }
     
-    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .none
     }
     

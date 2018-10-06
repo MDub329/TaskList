@@ -61,7 +61,7 @@ class Header: UITableViewHeaderFooterView{
 class MyCell: UITableViewCell {
     
     var myTableViewController: TaskViewController?
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViews()
     }
@@ -96,7 +96,7 @@ class MyCell: UITableViewCell {
     let floatView: UIView = {
         let viewFloat = UIView()
         viewFloat.layer.cornerRadius = 5
-        viewFloat.layer.borderColor = UIColor.darkGray.cgColor
+        viewFloat.layer.borderColor = UIColor.white.cgColor
         viewFloat.layer.borderWidth = 2
         viewFloat.translatesAutoresizingMaskIntoConstraints = false
         return viewFloat
