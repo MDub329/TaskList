@@ -7,250 +7,204 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		044FA6BDE8CE7242ECAC9E2356636CC4 /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D007B70F3DEA78CF056A836E3270D755 /* ja.lproj */; };
-		0578537D9121D3D6F368A82C159C881E /* BLTNTitleLabelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6FEB486BBBDB318CBBC1840F3D0101 /* BLTNTitleLabelContainer.swift */; };
-		058D18E52C7B200141A4EB7F74C00A03 /* BulletinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293328F77F04B8EC7E6D4987831E7D58 /* BulletinViewController.swift */; };
-		08FD5C69113606AD79C709E9B6DAA73A /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AC6F6AE3FA50E47FB42C6FAC8503B1F5 /* it.lproj */; };
-		0DCD7AAC69B2DC7FF82EC27C92395311 /* UIColor+Luminance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB966E300AC4CA696F384E37EBD29D5E /* UIColor+Luminance.swift */; };
-		1089D2B91E705A2749B0C3799A8E754F /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 80CC119199C9D89D9DBA2359EDF4A6DA /* es.lproj */; };
-		15A6E2D8B8E777FEB944BF4EA5FD4008 /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = D804E1D0BDC160CB13BD6016F78C0E35 /* SVRadialGradientLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		15F78AA3D6D99620E55FAA0F463FB174 /* ca.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 632108BA19CD28834A2739430D601F8E /* ca.lproj */; };
-		1729EAB3B37C94CE9B799F600CF1A76F /* ro.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FD9652AB24B9ED741C5F7D63A8FF0E87 /* ro.lproj */; };
-		1C82EDBEB6C2B551D2F6FC5099954FD4 /* Highlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A31664A293FA2F130B5601EBEB9CE3 /* Highlighter.swift */; };
-		1FEC38F0A61393ED189F23BB46A76274 /* BulletinCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD0C14E145B9D0392321BD07DDB3DE5 /* BulletinCloseButton.swift */; };
-		2161AEB39BADC8EB50F7080D43C2C897 /* BLTNItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 31101752208EC0640F903D68D6CA12BD /* BLTNItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2358318551E604E952D841CBDCE3610C /* hu.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D347770E6500C8AE1C39C98C768E4F66 /* hu.lproj */; };
-		2683770668745060B9D5E8A971D0D02C /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 1665BD2E9FB529F68B88D303F9CF8B79 /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		283FDBFDCAB559FEF1AFB78E46C3F308 /* BLTNPageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 790402D0C23010E8C75A7288820E6709 /* BLTNPageItem.m */; };
-		299F82CC83A989840FF0D4876F089EAA /* Deprecations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CFD29C641EEB33BB50069CAB52A9B /* Deprecations.swift */; };
-		2A0B178502C77623EA20BA1EFF29211D /* hi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9C9651D022519D7C6CC717C1093473FE /* hi.lproj */; };
-		2A1988C91EFB49B08AF409A6764A0B43 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 079174F26C94C93F9B24A98FD1694982 /* SVProgressHUD.bundle */; };
-		2BB4F796B3B7F0BAA475B8FB6F9A7D8B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E839864EE09C8CE0528DE01FD9241A /* QuartzCore.framework */; };
-		319E5A8ED89C2F9BB54D7455A617E3DC /* vi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 46DEA0A655B070A6DED34D961E9BD39B /* vi.lproj */; };
-		342A6FC1E9D9F6CCBA64CEE23FB872D3 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EC225BFA8EEDD57A1497218AF473D /* ActivityIndicator.swift */; };
-		34CDC93200292B7E8693F7B728B3EDEE /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B84EE0FDD8462324CE830AB77E9758 /* SVProgressHUD.m */; };
-		3F9BB62D5AD431DB0F78F8BB0043F70A /* ContinuousMaskLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA234D58C316F80E854C2CBA4F34AB0 /* ContinuousMaskLayer.swift */; };
-		3FB79F284A76D036C7B359E8DDD55F43 /* he.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 96CAD90240F61D8542AE62E42EE885D7 /* he.lproj */; };
-		425A1B040F9D758087D43AD39457CD09 /* pl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 224A2980F0E3E9F40D54B72FDBFB74D8 /* pl.lproj */; };
-		46644004B0589DF3C63C80C0965E1AB8 /* CloseGlyph@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF52667D1CF21A254A8FA5B84225A29 /* CloseGlyph@2x.png */; };
-		4902A7A6B0C38F452269341317210A45 /* th.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C94212BD829A8EB7A07D23EA437A31C8 /* th.lproj */; };
-		507255906209EA48076D8C3F67AE9707 /* sv.lproj in Resources */ = {isa = PBXBuildFile; fileRef = ECA7DFDAF75A2F39E4949C64DB901EDA /* sv.lproj */; };
-		56DC3250A9AEE89F46F06C21C25AE06F /* BLTNBoardSwiftSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = BD745FE047723F1938F849E3304AD49B /* BLTNBoardSwiftSupport.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		56DF858F00AEB76818912FE168387DD9 /* da.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5EEEA5003BECF1FB5FE73B2E8F05747A /* da.lproj */; };
-		56FC3E4BD283E18FA41F12804F32443B /* BulletinSwipeInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32FFC6DFFB8B4B20EC08C1592CA7219 /* BulletinSwipeInteractionController.swift */; };
-		5756E195980F49D6B9ADE36F324CD734 /* Pods-TaskApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC6071A3F019E2A3F8519DB17FC48EF /* Pods-TaskApp-dummy.m */; };
-		575C7063F2D1E3660DCDF0A485824130 /* BLTNItemAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EFF81C6EC7B25F49ECC6414B1E632 /* BLTNItemAppearance.swift */; };
-		5B0077E8C757BE9B7EFB513CA555263A /* BLTNBackgroundViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042A8A7487866D6F147685B5844C657 /* BLTNBackgroundViewStyle.swift */; };
-		5C0C14B7FE2493B9C222943ADC56037A /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 72C70A3343B37ABBC97C82265A930A7A /* ru.lproj */; };
-		5CD90B372BC0FD69D9FB41D300240441 /* UIView+SafeAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D99860222BE9B0DF13B5A142004BB1B /* UIView+SafeAnchors.swift */; };
-		616BB18C160A775F59040C36C30B8863 /* CloseGlyph.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA2909AA91CE5A73A4513FA11D8931B /* CloseGlyph.png */; };
-		632DBCBCF64C5E78E31956A7730D35B6 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4EEB1C4D1CF3DB8262191FC660E94DDC /* zh-Hans.lproj */; };
-		63319DD49EDF410F290E0D930FC66EAA /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4140136E45EBAAE20DDEFB3DA46A853B /* ko.lproj */; };
-		6A04A18FADB37E456C8A861F1499D493 /* BLTNSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA6202707A920F2066D9E209F2659C0 /* BLTNSpacing.swift */; };
-		6A6F155AEC40302C4245E41BB684A993 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 228E20D789314521E899939B88BBAEE9 /* fr.lproj */; };
-		6A7A0A01A31B343EDBCC19562CFA3C6A /* Pods-TaskApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A0FDC1CBF747052F5722020E8097AA4A /* Pods-TaskApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6CFFDB524FF3568148C99F4F498CD158 /* BulletinBoard-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DC790167254FA1985E2AFAA624F9FFFE /* BulletinBoard-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6D0C5EBB551956725462D85566184DE2 /* pt-PT.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9B9994D866961E896F06A1F867A7F4B1 /* pt-PT.lproj */; };
-		6E55AD05A8230D2BBA943B7A609FBF4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C7A160ABE5DAC85DC33E762CF55AE1 /* Foundation.framework */; };
-		6EBFE48E84CC9FB452AF75CB74001730 /* HighlightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EC474D1196EED1F6A07AFDA95AAE54 /* HighlightButton.swift */; };
-		7A7AEDC7B9334697DA73F456391DADDC /* ar.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3202711F1DE63CDC3B4ED3AF96B016FC /* ar.lproj */; };
-		7D30E8C93197DEC3387C75E541D60BE2 /* tr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5BB518B5DA7D48F65D281818382D5D6F /* tr.lproj */; };
-		807A7B1CA5063725529158A5CE5722C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C7A160ABE5DAC85DC33E762CF55AE1 /* Foundation.framework */; };
-		82DF36508F3B195E7466F712E705ED68 /* BLTNViewPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A2C1634DAF27E3D686E689B7C20CA0 /* BLTNViewPosition.swift */; };
-		83A134D346D96DB8CCA77D8E1800F7EB /* SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE150AF6059266CCD838B4D7FDB94810 /* SVProgressHUD-dummy.m */; };
-		84F0E0B0DF53D35357BFC963821BFFF6 /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 17A8FCC8647CE199F61933D135846CA5 /* nl.lproj */; };
-		8577052236B55E0F730205E7CA42399D /* zh-Hant.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 62E20AF1DA01E1A76A3843C87121432A /* zh-Hant.lproj */; };
-		8916633F5FDB4BC9B36AF8463BD5B67A /* SVProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C8F8B87433602732AC592A6DAAAAA4EE /* SVProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8C3E61668760F130953326BAC8309153 /* BLTNInterfaceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1C2C258A0805FBD6373DC31E82955B /* BLTNInterfaceBuilder.swift */; };
-		8F129FC2DD6B3F5E72FCD815E6662B80 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 302FD743F3E2FC9DEC373BD1B74B94C6 /* SVProgressAnimatedView.m */; };
-		95729E59588B118AC794418BB93EAE14 /* CloseGlyph@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDAF3640C92A47460F40C8DA1AA237F9 /* CloseGlyph@3x.png */; };
-		9B518563220CC3491F12D45CBEEF5A15 /* el.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 061FF0DEEA3EE8066DE944053769E111 /* el.lproj */; };
-		9E76401D6A27EF91F1008B2FE3FD97AA /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C43B0F336703CA32F6077009E45C888D /* de.lproj */; };
-		9F5F5088CFACFD7561CEB07EFE8585B2 /* BLTNContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F4077AA97EE76AF5649753537B6FC /* BLTNContainerView.swift */; };
-		A0922B3386D8204E7253D2BF015535B3 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 973E7D7AF8DAE29A1DFEE4D7FB0AD473 /* en.lproj */; };
-		A241359C7E99F41E7E149EA1CC89FF5F /* UIButton+BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF94EB40F714C47DA96B2F8CACEC541D /* UIButton+BackgroundColor.swift */; };
-		B288D529A5EDFF783F96A44D99D4286A /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D6412AC4AC1DA038DF0E3B5701630 /* SVRadialGradientLayer.m */; };
-		B3561312F4A617831A10CA5383262B58 /* UIView+RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD9F09660AB058AA4EBEF6D6EB91752 /* UIView+RoundedView.swift */; };
-		B41B4B6FD9CA32B0EE9804F25239D1FA /* sk.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 19438BC66D2A18455B7CBDD6DF31958A /* sk.lproj */; };
-		B504E9735466BC6D9C380FD2C2847D78 /* fi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B30D612B47394621D0B9B1A7207C365C /* fi.lproj */; };
-		B9BB837C5F276943916ABE4A708E0EE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E826AE0196CB3540E72242664FBD3F32 /* UIKit.framework */; };
-		B9E10086A331D04EE21D6F0EDBA0FFCA /* BulletinBoard-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CED6A441FD9602CE028624B4953F70 /* BulletinBoard-dummy.m */; };
-		BCA1A0188BC8D99F796324FA97522530 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3169745969A1AA6D0EB90277A8D4A54E /* SVIndefiniteAnimatedView.m */; };
-		BCDDF583F59A03EEDACA64E4DEEC5CCE /* BulletinDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C53A051A520F1719CFFAA5067505FF /* BulletinDismissAnimationController.swift */; };
-		C0BFECD69852676F06583E2DEF5AB1EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C7A160ABE5DAC85DC33E762CF55AE1 /* Foundation.framework */; };
-		C5C3C0D3083063838A9407B958834F46 /* id.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 75283C888DBD3B4C3580300EBC2CD9D7 /* id.lproj */; };
-		C80C29203D9E5E16DA4D5ABB1FEC3301 /* ms.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5A2DAB33DD2B11C49A9D3C64217ED615 /* ms.lproj */; };
-		CBDAFEF8C66A614712F259350B44C5AD /* BLTNPageItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 00695014F0365A4170CC5C6F1F869E16 /* BLTNPageItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D369D3B7AA6BEF53AA2A7B933DD50FAB /* BLTNHighlightButtonWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311AE8C20137DD238BF8FDB5E4216959 /* BLTNHighlightButtonWrapper.swift */; };
-		D7D02D6F5E2813AB1AE52D53ACE708F4 /* BLTNBoard.h in Headers */ = {isa = PBXBuildFile; fileRef = CD6BD95DBE6B2022AB6E74DABA46F5D6 /* BLTNBoard.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DB9A071410A6CAD5CE0DE7E1738837CD /* RoundedViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647345F4B5444C1491869002C9992E9A /* RoundedViewProtocol.swift */; };
-		DC29E540ED510383BDC198DA16797B78 /* cs.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 1EB982A80FE270D39EC94FCE2E256B2E /* cs.lproj */; };
-		DFCED77BCA56AE107BD74008C2B94939 /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 23B064584EA9D6995E90445B6ADF81E5 /* SVIndefiniteAnimatedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5556E39234A250CBCAAF24105E41565 /* BulletinBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537F4C77728C34ADFCA3D604CD54E534 /* BulletinBackgroundView.swift */; };
-		E8855269D766A6F7F54A6FAFDBBAB278 /* BulletinPresentationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3607B7CAC38E8D623F41798909527841 /* BulletinPresentationAnimationController.swift */; };
-		ECE7248BAC8CDD67C0B649FCB5543B2F /* BLTNActionItem.h in Headers */ = {isa = PBXBuildFile; fileRef = E98A71CCD8F4447CE12106411DFF24B6 /* BLTNActionItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EEC38D5691B0D45042853DAFCADC1C3F /* hr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6106B85F45FA4895024B9255CBFABCBC /* hr.lproj */; };
-		EEFFD1B9F517C4AA87E006A7629F828B /* BLTNItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6033843EC1EE7E94FFB137B6D085DC9 /* BLTNItemManager.swift */; };
-		F1831B8BE0C4078C2DDFB5F62967AF2B /* pt-BR.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 373E17DCBE2A7C10423B1E14BAAE8E47 /* pt-BR.lproj */; };
-		F60625378E6956252C074DD399352879 /* nb.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 257C55B66E1D7746C724D29EDA398F92 /* nb.lproj */; };
-		F727DEC29F45A1BB8F4D6B2AF34476D7 /* uk.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 28EEC1619B6858950856AD6ACACD2B84 /* uk.lproj */; };
-		FEFF664E903D993CBA5A419353472C12 /* SVProgressAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = E3C68C69D59A39F5929CA86B6FC8D786 /* SVProgressAnimatedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FF5BC2A25CBCEFBBB298E1937047AD67 /* AnimationChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A40F2F33A76C390537DDF8C9794F315 /* AnimationChain.swift */; };
-		FFCDCFCACE322DCA1273E61ECB8BA4C1 /* BLTNActionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F54C3FC10B9537A2FC4CA7B353539F /* BLTNActionItem.m */; };
+		044FA6BDE8CE7242ECAC9E2356636CC4 /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E0E2ADE27C687DF4A081FDFA77E90AFE /* ja.lproj */; };
+		0578537D9121D3D6F368A82C159C881E /* BLTNTitleLabelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1468E092FD050FB8E00A03A8F22DC5B /* BLTNTitleLabelContainer.swift */; };
+		058D18E52C7B200141A4EB7F74C00A03 /* BulletinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BE35AD6A951349579A1D1A6C88CD53 /* BulletinViewController.swift */; };
+		08FD5C69113606AD79C709E9B6DAA73A /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = CA3B2A80CED159485D967F3BAAB09616 /* it.lproj */; };
+		0DCD7AAC69B2DC7FF82EC27C92395311 /* UIColor+Luminance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E21AC60DFE06E0948E5071B80163BCC /* UIColor+Luminance.swift */; };
+		1089D2B91E705A2749B0C3799A8E754F /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C43E274E36E05AE2114C210983FD1F69 /* es.lproj */; };
+		15F78AA3D6D99620E55FAA0F463FB174 /* ca.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E6C436AABA5C94ED18DB9559A86C014E /* ca.lproj */; };
+		1729EAB3B37C94CE9B799F600CF1A76F /* ro.lproj in Resources */ = {isa = PBXBuildFile; fileRef = ADD574038B28F88441EA1D8E06D61054 /* ro.lproj */; };
+		1C82EDBEB6C2B551D2F6FC5099954FD4 /* Highlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CDAF89EF2FC753E676E630D2F2FDB /* Highlighter.swift */; };
+		1FEC38F0A61393ED189F23BB46A76274 /* BulletinCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D62EAD49C20FCBE217BD02F877993F4 /* BulletinCloseButton.swift */; };
+		2161AEB39BADC8EB50F7080D43C2C897 /* BLTNItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BEF4217FC7A60E71FBFF70B45C21CB8 /* BLTNItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2358318551E604E952D841CBDCE3610C /* hu.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6ACCFC888979111B100FF8ABED34E96D /* hu.lproj */; };
+		283FDBFDCAB559FEF1AFB78E46C3F308 /* BLTNPageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AB17A717B58E168F21A4509792319D16 /* BLTNPageItem.m */; };
+		299F82CC83A989840FF0D4876F089EAA /* Deprecations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B19D0C185313BEA3362A0FE5549283 /* Deprecations.swift */; };
+		2A0B178502C77623EA20BA1EFF29211D /* hi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FB1CF0BB876086B581B7336D8B54D4F6 /* hi.lproj */; };
+		319E5A8ED89C2F9BB54D7455A617E3DC /* vi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A8A4B0682D2B3D8EB2449B7BD96FDA4F /* vi.lproj */; };
+		342A6FC1E9D9F6CCBA64CEE23FB872D3 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F39069CB33C34DD3874AECEA6BA610 /* ActivityIndicator.swift */; };
+		3F9BB62D5AD431DB0F78F8BB0043F70A /* ContinuousMaskLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5DC93DB1E051DD2C4BEB2807E87783 /* ContinuousMaskLayer.swift */; };
+		3FB79F284A76D036C7B359E8DDD55F43 /* he.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 64E56E2A51FEE1A0B0AB1DE208BB3BBD /* he.lproj */; };
+		425A1B040F9D758087D43AD39457CD09 /* pl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4E9223AD99700BBD02C28F6BB918FA07 /* pl.lproj */; };
+		46644004B0589DF3C63C80C0965E1AB8 /* CloseGlyph@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEB213156413558431FAD277D3F5221 /* CloseGlyph@2x.png */; };
+		4902A7A6B0C38F452269341317210A45 /* th.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 035238FD254F590BE76EA39CDB6E6462 /* th.lproj */; };
+		507255906209EA48076D8C3F67AE9707 /* sv.lproj in Resources */ = {isa = PBXBuildFile; fileRef = DBF579C8C44C0A0DF26D41CF22A6E359 /* sv.lproj */; };
+		56DC3250A9AEE89F46F06C21C25AE06F /* BLTNBoardSwiftSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = BE5FFD4D2715C05FC6A54E57246F56B5 /* BLTNBoardSwiftSupport.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		56DF858F00AEB76818912FE168387DD9 /* da.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 405BE36EDA5F4A2217454B73033B9755 /* da.lproj */; };
+		56FC3E4BD283E18FA41F12804F32443B /* BulletinSwipeInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB174F01CB628154CE8ECCE8DC8E4923 /* BulletinSwipeInteractionController.swift */; };
+		575C7063F2D1E3660DCDF0A485824130 /* BLTNItemAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CBA81B0EB434B47ECEC2DF63F8C1D0 /* BLTNItemAppearance.swift */; };
+		5B0077E8C757BE9B7EFB513CA555263A /* BLTNBackgroundViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12CF0E0D8DD980BC3A49F163426D39B /* BLTNBackgroundViewStyle.swift */; };
+		5C0C14B7FE2493B9C222943ADC56037A /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3EC2F005B14D9750197DA2B69A2B640B /* ru.lproj */; };
+		5CD90B372BC0FD69D9FB41D300240441 /* UIView+SafeAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE28C12126A3FCEA0F1EDD789E6D1A0 /* UIView+SafeAnchors.swift */; };
+		616BB18C160A775F59040C36C30B8863 /* CloseGlyph.png in Resources */ = {isa = PBXBuildFile; fileRef = 316A610658B5FEBE06CDD5F499BEBCDA /* CloseGlyph.png */; };
+		632DBCBCF64C5E78E31956A7730D35B6 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0A1F483CB6063CFFD38156F4EF09D8A4 /* zh-Hans.lproj */; };
+		63319DD49EDF410F290E0D930FC66EAA /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 02B7532576B8844DFF721044F056999B /* ko.lproj */; };
+		6A04A18FADB37E456C8A861F1499D493 /* BLTNSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2B8892FA0515172FBF3BD1F8B70C28 /* BLTNSpacing.swift */; };
+		6A6F155AEC40302C4245E41BB684A993 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6A1E71FDC6FA943D647E688CDD8B7A42 /* fr.lproj */; };
+		6CFFDB524FF3568148C99F4F498CD158 /* BulletinBoard-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 57231CC305619119F0005AFB26BDF44B /* BulletinBoard-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D0C5EBB551956725462D85566184DE2 /* pt-PT.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9F6372418122A1B524DB7F631C2D88F2 /* pt-PT.lproj */; };
+		6EBFE48E84CC9FB452AF75CB74001730 /* HighlightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC3BB8649C8CFD024783694BAF2EA96 /* HighlightButton.swift */; };
+		7A7AEDC7B9334697DA73F456391DADDC /* ar.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FDCDDD1FCE7475A374CAC7DC27D1B5F9 /* ar.lproj */; };
+		7D30E8C93197DEC3387C75E541D60BE2 /* tr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4E0498E211A16FE2D0362F8F0E3E0B8E /* tr.lproj */; };
+		807A7B1CA5063725529158A5CE5722C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		82DF36508F3B195E7466F712E705ED68 /* BLTNViewPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FECFD04070E6B293A579FDEF21F1E6F /* BLTNViewPosition.swift */; };
+		84F0E0B0DF53D35357BFC963821BFFF6 /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3FE9074C7BFF23B541CCC082A38881BC /* nl.lproj */; };
+		8577052236B55E0F730205E7CA42399D /* zh-Hant.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D556ABA6854EF1824441716AE693ECC6 /* zh-Hant.lproj */; };
+		8C3E61668760F130953326BAC8309153 /* BLTNInterfaceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CABC588981A08E22EF4818622F528D /* BLTNInterfaceBuilder.swift */; };
+		8CCC2831B74B5744FE3F060467E7712D /* Pods-TaskApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A0FDC1CBF747052F5722020E8097AA4A /* Pods-TaskApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92A7DCC75D650924994AE8E6C476AC6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		95729E59588B118AC794418BB93EAE14 /* CloseGlyph@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B096667124BE77054829655AA9FCC8F9 /* CloseGlyph@3x.png */; };
+		9B518563220CC3491F12D45CBEEF5A15 /* el.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7B42642D1EDB567047AC2615835CA961 /* el.lproj */; };
+		9E76401D6A27EF91F1008B2FE3FD97AA /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 1DB386CE26E698E8E45D82E8BEBCBC9E /* de.lproj */; };
+		9F5F5088CFACFD7561CEB07EFE8585B2 /* BLTNContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA307940C04A386A9420C57BAA9F42C5 /* BLTNContainerView.swift */; };
+		A0922B3386D8204E7253D2BF015535B3 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0E188A71EE0D335FC3D99131FF5811D7 /* en.lproj */; };
+		A1D6DBB13EA68BD84653C5A6506919A8 /* Pods-TaskApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC6071A3F019E2A3F8519DB17FC48EF /* Pods-TaskApp-dummy.m */; };
+		A241359C7E99F41E7E149EA1CC89FF5F /* UIButton+BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FA5D8A05057CC9EF772F89EC42C94E /* UIButton+BackgroundColor.swift */; };
+		B3561312F4A617831A10CA5383262B58 /* UIView+RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B79F3E3F666D8150DF9293C4980C89E /* UIView+RoundedView.swift */; };
+		B41B4B6FD9CA32B0EE9804F25239D1FA /* sk.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7DF9CE86CFD76FE9904578B2CB9867D9 /* sk.lproj */; };
+		B504E9735466BC6D9C380FD2C2847D78 /* fi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 458BADF0849AF97969784232F2FAE050 /* fi.lproj */; };
+		B9BB837C5F276943916ABE4A708E0EE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
+		B9E10086A331D04EE21D6F0EDBA0FFCA /* BulletinBoard-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E82F6F181A2568255C1DC7868A78EAF0 /* BulletinBoard-dummy.m */; };
+		BCDDF583F59A03EEDACA64E4DEEC5CCE /* BulletinDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D3EFB59387733597AB0DD4D997F8E /* BulletinDismissAnimationController.swift */; };
+		C5C3C0D3083063838A9407B958834F46 /* id.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 1BD34FA930CB438808B6BE4B471DF2D3 /* id.lproj */; };
+		C80C29203D9E5E16DA4D5ABB1FEC3301 /* ms.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F2B9B74BF0A6614035DC6623B07308DB /* ms.lproj */; };
+		CBDAFEF8C66A614712F259350B44C5AD /* BLTNPageItem.h in Headers */ = {isa = PBXBuildFile; fileRef = DC6028EEB343BE051550931A6CAC369F /* BLTNPageItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D369D3B7AA6BEF53AA2A7B933DD50FAB /* BLTNHighlightButtonWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF651CF02FDC18426B715428887511C /* BLTNHighlightButtonWrapper.swift */; };
+		D7D02D6F5E2813AB1AE52D53ACE708F4 /* BLTNBoard.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B3E485D3FA97C87A868710B4D7CBD8F /* BLTNBoard.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB9A071410A6CAD5CE0DE7E1738837CD /* RoundedViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCADDFEA62EA05F364AC2A3FA9FD152 /* RoundedViewProtocol.swift */; };
+		DC29E540ED510383BDC198DA16797B78 /* cs.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3889E1BB925C71CEC3FB141470AB552B /* cs.lproj */; };
+		E5556E39234A250CBCAAF24105E41565 /* BulletinBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC8F3C59F10BD34DB398913176EF414 /* BulletinBackgroundView.swift */; };
+		E8855269D766A6F7F54A6FAFDBBAB278 /* BulletinPresentationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6EF2A2F0C0140CD438AB5760622BA1 /* BulletinPresentationAnimationController.swift */; };
+		ECE7248BAC8CDD67C0B649FCB5543B2F /* BLTNActionItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 269B4C69B5174ECFD3A3A3E345557CC8 /* BLTNActionItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEC38D5691B0D45042853DAFCADC1C3F /* hr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 64C77C66EB948E281591A130E28F3970 /* hr.lproj */; };
+		EEFFD1B9F517C4AA87E006A7629F828B /* BLTNItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5E8E71888B0830C4E407E46BBCB73 /* BLTNItemManager.swift */; };
+		F1831B8BE0C4078C2DDFB5F62967AF2B /* pt-BR.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 209917AC64418B8A8D61EB6AB9D2FA56 /* pt-BR.lproj */; };
+		F60625378E6956252C074DD399352879 /* nb.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2C7BB6B1E8AA3788D3694E112DE33451 /* nb.lproj */; };
+		F727DEC29F45A1BB8F4D6B2AF34476D7 /* uk.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 211F74E0F6BA32366B4B02DA317D247F /* uk.lproj */; };
+		FF5BC2A25CBCEFBBB298E1937047AD67 /* AnimationChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A183AE00424324DEB105DD273E75B0B7 /* AnimationChain.swift */; };
+		FFCDCFCACE322DCA1273E61ECB8BA4C1 /* BLTNActionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D32EAE54D8E8ABF9FC7D3AF05885F0 /* BLTNActionItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		686A27B24DCA8F342BB39F6C4325A322 /* PBXContainerItemProxy */ = {
+		BF1702315772AA0792905F701A376B6B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6488D87346DC99464D1D55C47589C8A5;
 			remoteInfo = BulletinBoard;
 		};
-		CC7417DFCCF66ACE91A86C63ACD16A9D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 92983F66C7BADEFBB497E96914D51221;
-			remoteInfo = SVProgressHUD;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00695014F0365A4170CC5C6F1F869E16 /* BLTNPageItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BLTNPageItem.h; path = Sources/Models/BLTNPageItem.h; sourceTree = "<group>"; };
-		03C53A051A520F1719CFFAA5067505FF /* BulletinDismissAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BulletinDismissAnimationController.swift; path = Sources/Support/Animations/BulletinDismissAnimationController.swift; sourceTree = "<group>"; };
-		061FF0DEEA3EE8066DE944053769E111 /* el.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = el.lproj; path = Resources/Strings/el.lproj; sourceTree = "<group>"; };
-		06CED6A441FD9602CE028624B4953F70 /* BulletinBoard-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BulletinBoard-dummy.m"; sourceTree = "<group>"; };
+		00CABC588981A08E22EF4818622F528D /* BLTNInterfaceBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BLTNInterfaceBuilder.swift; path = Sources/Appearance/BLTNInterfaceBuilder.swift; sourceTree = "<group>"; };
+		02B7532576B8844DFF721044F056999B /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ko.lproj; path = Resources/Strings/ko.lproj; sourceTree = "<group>"; };
+		035238FD254F590BE76EA39CDB6E6462 /* th.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = th.lproj; path = Resources/Strings/th.lproj; sourceTree = "<group>"; };
 		0753AE724430C9778BF1500F4255F431 /* Pods-TaskApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaskApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		079174F26C94C93F9B24A98FD1694982 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
-		0A40F2F33A76C390537DDF8C9794F315 /* AnimationChain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationChain.swift; path = Sources/Support/Animations/AnimationChain.swift; sourceTree = "<group>"; };
+		0A1F483CB6063CFFD38156F4EF09D8A4 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "Resources/Strings/zh-Hans.lproj"; sourceTree = "<group>"; };
+		0E188A71EE0D335FC3D99131FF5811D7 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Resources/Strings/en.lproj; sourceTree = "<group>"; };
 		1227A9E2F34FE54FD2AD0446716A702F /* Pods-TaskApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TaskApp-resources.sh"; sourceTree = "<group>"; };
-		1665BD2E9FB529F68B88D303F9CF8B79 /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
-		17A8FCC8647CE199F61933D135846CA5 /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nl.lproj; path = Resources/Strings/nl.lproj; sourceTree = "<group>"; };
-		19438BC66D2A18455B7CBDD6DF31958A /* sk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = sk.lproj; path = Resources/Strings/sk.lproj; sourceTree = "<group>"; };
-		1D5D6412AC4AC1DA038DF0E3B5701630 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVRadialGradientLayer.m; path = SVProgressHUD/SVRadialGradientLayer.m; sourceTree = "<group>"; };
-		1EB982A80FE270D39EC94FCE2E256B2E /* cs.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = cs.lproj; path = Resources/Strings/cs.lproj; sourceTree = "<group>"; };
-		20F54C3FC10B9537A2FC4CA7B353539F /* BLTNActionItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BLTNActionItem.m; path = Sources/Models/BLTNActionItem.m; sourceTree = "<group>"; };
-		224A2980F0E3E9F40D54B72FDBFB74D8 /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pl.lproj; path = Resources/Strings/pl.lproj; sourceTree = "<group>"; };
-		228E20D789314521E899939B88BBAEE9 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = Resources/Strings/fr.lproj; sourceTree = "<group>"; };
-		22A2C1634DAF27E3D686E689B7C20CA0 /* BLTNViewPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BLTNViewPosition.swift; path = Sources/Appearance/BLTNViewPosition.swift; sourceTree = "<group>"; };
-		23B064584EA9D6995E90445B6ADF81E5 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
-		257C55B66E1D7746C724D29EDA398F92 /* nb.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nb.lproj; path = Resources/Strings/nb.lproj; sourceTree = "<group>"; };
-		28EEC1619B6858950856AD6ACACD2B84 /* uk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = uk.lproj; path = Resources/Strings/uk.lproj; sourceTree = "<group>"; };
-		293328F77F04B8EC7E6D4987831E7D58 /* BulletinViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BulletinViewController.swift; path = Sources/Support/BulletinViewController.swift; sourceTree = "<group>"; };
-		2AB8EA078E0280F04B6767CA5EF7D687 /* BLTNBoard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BLTNBoard.framework; path = BulletinBoard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BA234D58C316F80E854C2CBA4F34AB0 /* ContinuousMaskLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContinuousMaskLayer.swift; path = Sources/Support/Views/Internal/ContinuousCorners/ContinuousMaskLayer.swift; sourceTree = "<group>"; };
-		2E3ABB02A74DF289763CE4FCDFC46D4F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		302FD743F3E2FC9DEC373BD1B74B94C6 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressAnimatedView.m; path = SVProgressHUD/SVProgressAnimatedView.m; sourceTree = "<group>"; };
-		31101752208EC0640F903D68D6CA12BD /* BLTNItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BLTNItem.h; path = Sources/Models/BLTNItem.h; sourceTree = "<group>"; };
-		311AE8C20137DD238BF8FDB5E4216959 /* BLTNHighlightButtonWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BLTNHighlightButtonWrapper.swift; path = Sources/Support/Views/Public/BLTNHighlightButtonWrapper.swift; sourceTree = "<group>"; };
-		3169745969A1AA6D0EB90277A8D4A54E /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = SVProgressHUD/SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
-		3202711F1DE63CDC3B4ED3AF96B016FC /* ar.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ar.lproj; path = Resources/Strings/ar.lproj; sourceTree = "<group>"; };
-		34A31664A293FA2F130B5601EBEB9CE3 /* Highlighter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Highlighter.swift; path = Sources/Support/Views/Internal/Highlighter.swift; sourceTree = "<group>"; };
-		3607B7CAC38E8D623F41798909527841 /* BulletinPresentationAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BulletinPresentationAnimationController.swift; path = Sources/Support/Animations/BulletinPresentationAnimationController.swift; sourceTree = "<group>"; };
-		373E17DCBE2A7C10423B1E14BAAE8E47 /* pt-BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-BR.lproj"; path = "Resources/Strings/pt-BR.lproj"; sourceTree = "<group>"; };
+		199620CC03E084D3002D7C6E99A94253 /* BulletinBoard-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BulletinBoard-prefix.pch"; sourceTree = "<group>"; };
+		1BD34FA930CB438808B6BE4B471DF2D3 /* id.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = id.lproj; path = Resources/Strings/id.lproj; sourceTree = "<group>"; };
+		1DB386CE26E698E8E45D82E8BEBCBC9E /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = Resources/Strings/de.lproj; sourceTree = "<group>"; };
+		1FC8F3C59F10BD34DB398913176EF414 /* BulletinBackgroundView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BulletinBackgroundView.swift; path = Sources/Support/Views/Internal/BulletinBackgroundView.swift; sourceTree = "<group>"; };
+		209917AC64418B8A8D61EB6AB9D2FA56 /* pt-BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-BR.lproj"; path = "Resources/Strings/pt-BR.lproj"; sourceTree = "<group>"; };
+		211F74E0F6BA32366B4B02DA317D247F /* uk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = uk.lproj; path = Resources/Strings/uk.lproj; sourceTree = "<group>"; };
+		269B4C69B5174ECFD3A3A3E345557CC8 /* BLTNActionItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BLTNActionItem.h; path = Sources/Models/BLTNActionItem.h; sourceTree = "<group>"; };
+		2C7BB6B1E8AA3788D3694E112DE33451 /* nb.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nb.lproj; path = Resources/Strings/nb.lproj; sourceTree = "<group>"; };
+		2CCADDFEA62EA05F364AC2A3FA9FD152 /* RoundedViewProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoundedViewProtocol.swift; path = Sources/Support/Views/Internal/ContinuousCorners/RoundedViewProtocol.swift; sourceTree = "<group>"; };
+		316A610658B5FEBE06CDD5F499BEBCDA /* CloseGlyph.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = CloseGlyph.png; path = Resources/CloseGlyph.png; sourceTree = "<group>"; };
+		3889E1BB925C71CEC3FB141470AB552B /* cs.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = cs.lproj; path = Resources/Strings/cs.lproj; sourceTree = "<group>"; };
+		3B5DC93DB1E051DD2C4BEB2807E87783 /* ContinuousMaskLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContinuousMaskLayer.swift; path = Sources/Support/Views/Internal/ContinuousCorners/ContinuousMaskLayer.swift; sourceTree = "<group>"; };
 		3CC6071A3F019E2A3F8519DB17FC48EF /* Pods-TaskApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaskApp-dummy.m"; sourceTree = "<group>"; };
-		4140136E45EBAAE20DDEFB3DA46A853B /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ko.lproj; path = Resources/Strings/ko.lproj; sourceTree = "<group>"; };
-		46DEA0A655B070A6DED34D961E9BD39B /* vi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = vi.lproj; path = Resources/Strings/vi.lproj; sourceTree = "<group>"; };
-		4D6FEB486BBBDB318CBBC1840F3D0101 /* BLTNTitleLabelContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BLTNTitleLabelContainer.swift; path = Sources/Support/Views/Public/BLTNTitleLabelContainer.swift; sourceTree = "<group>"; };
-		4EEB1C4D1CF3DB8262191FC660E94DDC /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "Resources/Strings/zh-Hans.lproj"; sourceTree = "<group>"; };
-		4FD9F09660AB058AA4EBEF6D6EB91752 /* UIView+RoundedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+RoundedView.swift"; path = "Sources/Support/Views/Internal/ContinuousCorners/UIView+RoundedView.swift"; sourceTree = "<group>"; };
-		530051E8B31C8A51025B2D07AB4CEC5C /* Pods_TaskApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TaskApp.framework; path = "Pods-TaskApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		537F4C77728C34ADFCA3D604CD54E534 /* BulletinBackgroundView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BulletinBackgroundView.swift; path = Sources/Support/Views/Internal/BulletinBackgroundView.swift; sourceTree = "<group>"; };
-		5A2DAB33DD2B11C49A9D3C64217ED615 /* ms.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ms.lproj; path = Resources/Strings/ms.lproj; sourceTree = "<group>"; };
-		5BB518B5DA7D48F65D281818382D5D6F /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = tr.lproj; path = Resources/Strings/tr.lproj; sourceTree = "<group>"; };
-		5EEEA5003BECF1FB5FE73B2E8F05747A /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = da.lproj; path = Resources/Strings/da.lproj; sourceTree = "<group>"; };
+		3EC2F005B14D9750197DA2B69A2B640B /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ru.lproj; path = Resources/Strings/ru.lproj; sourceTree = "<group>"; };
+		3FE9074C7BFF23B541CCC082A38881BC /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nl.lproj; path = Resources/Strings/nl.lproj; sourceTree = "<group>"; };
+		3FECFD04070E6B293A579FDEF21F1E6F /* BLTNViewPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BLTNViewPosition.swift; path = Sources/Appearance/BLTNViewPosition.swift; sourceTree = "<group>"; };
+		405BE36EDA5F4A2217454B73033B9755 /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = da.lproj; path = Resources/Strings/da.lproj; sourceTree = "<group>"; };
+		407D3EFB59387733597AB0DD4D997F8E /* BulletinDismissAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BulletinDismissAnimationController.swift; path = Sources/Support/Animations/BulletinDismissAnimationController.swift; sourceTree = "<group>"; };
+		44E5E8E71888B0830C4E407E46BBCB73 /* BLTNItemManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BLTNItemManager.swift; path = Sources/BLTNItemManager.swift; sourceTree = "<group>"; };
+		458BADF0849AF97969784232F2FAE050 /* fi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fi.lproj; path = Resources/Strings/fi.lproj; sourceTree = "<group>"; };
+		4E0498E211A16FE2D0362F8F0E3E0B8E /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = tr.lproj; path = Resources/Strings/tr.lproj; sourceTree = "<group>"; };
+		4E21AC60DFE06E0948E5071B80163BCC /* UIColor+Luminance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Luminance.swift"; path = "Sources/Support/Helpers/UIColor+Luminance.swift"; sourceTree = "<group>"; };
+		4E9223AD99700BBD02C28F6BB918FA07 /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pl.lproj; path = Resources/Strings/pl.lproj; sourceTree = "<group>"; };
+		4EE28C12126A3FCEA0F1EDD789E6D1A0 /* UIView+SafeAnchors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+SafeAnchors.swift"; path = "Sources/Support/Helpers/UIView+SafeAnchors.swift"; sourceTree = "<group>"; };
+		51B19D0C185313BEA3362A0FE5549283 /* Deprecations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecations.swift; path = Sources/Deprecations.swift; sourceTree = "<group>"; };
+		56D32EAE54D8E8ABF9FC7D3AF05885F0 /* BLTNActionItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BLTNActionItem.m; path = Sources/Models/BLTNActionItem.m; sourceTree = "<group>"; };
+		57231CC305619119F0005AFB26BDF44B /* BulletinBoard-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BulletinBoard-umbrella.h"; sourceTree = "<group>"; };
+		5B6EF2A2F0C0140CD438AB5760622BA1 /* BulletinPresentationAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BulletinPresentationAnimationController.swift; path = Sources/Support/Animations/BulletinPresentationAnimationController.swift; sourceTree = "<group>"; };
 		5FC7BE29A9A99ED893A4B1FF16CC8F1B /* Pods-TaskApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TaskApp.modulemap"; sourceTree = "<group>"; };
-		6106B85F45FA4895024B9255CBFABCBC /* hr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = hr.lproj; path = Resources/Strings/hr.lproj; sourceTree = "<group>"; };
-		62E20AF1DA01E1A76A3843C87121432A /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hant.lproj"; path = "Resources/Strings/zh-Hant.lproj"; sourceTree = "<group>"; };
-		632108BA19CD28834A2739430D601F8E /* ca.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ca.lproj; path = Resources/Strings/ca.lproj; sourceTree = "<group>"; };
-		647345F4B5444C1491869002C9992E9A /* RoundedViewProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoundedViewProtocol.swift; path = Sources/Support/Views/Internal/ContinuousCorners/RoundedViewProtocol.swift; sourceTree = "<group>"; };
-		67646CB632738FB48C194A0E6CF7161C /* BulletinBoard-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BulletinBoard-prefix.pch"; sourceTree = "<group>"; };
-		7042A8A7487866D6F147685B5844C657 /* BLTNBackgroundViewStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BLTNBackgroundViewStyle.swift; path = Sources/Appearance/BLTNBackgroundViewStyle.swift; sourceTree = "<group>"; };
-		72C70A3343B37ABBC97C82265A930A7A /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ru.lproj; path = Resources/Strings/ru.lproj; sourceTree = "<group>"; };
+		60F34327BB885720D209B0B6980C111E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64C77C66EB948E281591A130E28F3970 /* hr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = hr.lproj; path = Resources/Strings/hr.lproj; sourceTree = "<group>"; };
+		64E56E2A51FEE1A0B0AB1DE208BB3BBD /* he.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = he.lproj; path = Resources/Strings/he.lproj; sourceTree = "<group>"; };
+		664CDAF89EF2FC753E676E630D2F2FDB /* Highlighter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Highlighter.swift; path = Sources/Support/Views/Internal/Highlighter.swift; sourceTree = "<group>"; };
+		6A1E71FDC6FA943D647E688CDD8B7A42 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = Resources/Strings/fr.lproj; sourceTree = "<group>"; };
+		6ACCFC888979111B100FF8ABED34E96D /* hu.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = hu.lproj; path = Resources/Strings/hu.lproj; sourceTree = "<group>"; };
+		6B79F3E3F666D8150DF9293C4980C89E /* UIView+RoundedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+RoundedView.swift"; path = "Sources/Support/Views/Internal/ContinuousCorners/UIView+RoundedView.swift"; sourceTree = "<group>"; };
+		6D62EAD49C20FCBE217BD02F877993F4 /* BulletinCloseButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BulletinCloseButton.swift; path = Sources/Support/Views/Internal/BulletinCloseButton.swift; sourceTree = "<group>"; };
 		73CF3E749451941F9D67F90E38C367D9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75283C888DBD3B4C3580300EBC2CD9D7 /* id.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = id.lproj; path = Resources/Strings/id.lproj; sourceTree = "<group>"; };
-		790402D0C23010E8C75A7288820E6709 /* BLTNPageItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BLTNPageItem.m; path = Sources/Models/BLTNPageItem.m; sourceTree = "<group>"; };
-		80CC119199C9D89D9DBA2359EDF4A6DA /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = Resources/Strings/es.lproj; sourceTree = "<group>"; };
-		8D99860222BE9B0DF13B5A142004BB1B /* UIView+SafeAnchors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+SafeAnchors.swift"; path = "Sources/Support/Helpers/UIView+SafeAnchors.swift"; sourceTree = "<group>"; };
+		7B3E485D3FA97C87A868710B4D7CBD8F /* BLTNBoard.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BLTNBoard.h; path = Sources/BLTNBoard.h; sourceTree = "<group>"; };
+		7B42642D1EDB567047AC2615835CA961 /* el.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = el.lproj; path = Resources/Strings/el.lproj; sourceTree = "<group>"; };
+		7DF9CE86CFD76FE9904578B2CB9867D9 /* sk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = sk.lproj; path = Resources/Strings/sk.lproj; sourceTree = "<group>"; };
+		8BC3BB8649C8CFD024783694BAF2EA96 /* HighlightButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HighlightButton.swift; path = Sources/Support/Views/Internal/HighlightButton.swift; sourceTree = "<group>"; };
 		8EF2DB3E11A61761AB6D0B280EAABAB7 /* Pods-TaskApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaskApp.release.xcconfig"; sourceTree = "<group>"; };
-		90C7A160ABE5DAC85DC33E762CF55AE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		9192B5370F7C2141B0120A3FD51038BC /* BulletinBoard.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BulletinBoard.xcconfig; sourceTree = "<group>"; };
+		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		9228728E023C2749497FA08B84145E15 /* Pods-TaskApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaskApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96CAD90240F61D8542AE62E42EE885D7 /* he.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = he.lproj; path = Resources/Strings/he.lproj; sourceTree = "<group>"; };
-		973E7D7AF8DAE29A1DFEE4D7FB0AD473 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Resources/Strings/en.lproj; sourceTree = "<group>"; };
-		9B9994D866961E896F06A1F867A7F4B1 /* pt-PT.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-PT.lproj"; path = "Resources/Strings/pt-PT.lproj"; sourceTree = "<group>"; };
-		9C9651D022519D7C6CC717C1093473FE /* hi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = hi.lproj; path = Resources/Strings/hi.lproj; sourceTree = "<group>"; };
+		9BEF4217FC7A60E71FBFF70B45C21CB8 /* BLTNItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BLTNItem.h; path = Sources/Models/BLTNItem.h; sourceTree = "<group>"; };
+		9F6372418122A1B524DB7F631C2D88F2 /* pt-PT.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-PT.lproj"; path = "Resources/Strings/pt-PT.lproj"; sourceTree = "<group>"; };
 		A0FDC1CBF747052F5722020E8097AA4A /* Pods-TaskApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaskApp-umbrella.h"; sourceTree = "<group>"; };
-		A83E001AFBC6065D6C4CA0B1151B7430 /* SVProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SVProgressHUD.modulemap; sourceTree = "<group>"; };
-		ABB985B397C7FBE481A2534904FF7ECC /* BulletinBoard.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BulletinBoard.modulemap; sourceTree = "<group>"; };
-		ABD0C14E145B9D0392321BD07DDB3DE5 /* BulletinCloseButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BulletinCloseButton.swift; path = Sources/Support/Views/Internal/BulletinCloseButton.swift; sourceTree = "<group>"; };
-		AC6F6AE3FA50E47FB42C6FAC8503B1F5 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = Resources/Strings/it.lproj; sourceTree = "<group>"; };
-		AD5ED0EA0663A5782728DD3D191E29E5 /* SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
-		AEF52667D1CF21A254A8FA5B84225A29 /* CloseGlyph@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "CloseGlyph@2x.png"; path = "Resources/CloseGlyph@2x.png"; sourceTree = "<group>"; };
-		B30D612B47394621D0B9B1A7207C365C /* fi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fi.lproj; path = Resources/Strings/fi.lproj; sourceTree = "<group>"; };
-		B8EC474D1196EED1F6A07AFDA95AAE54 /* HighlightButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HighlightButton.swift; path = Sources/Support/Views/Internal/HighlightButton.swift; sourceTree = "<group>"; };
-		BD745FE047723F1938F849E3304AD49B /* BLTNBoardSwiftSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BLTNBoardSwiftSupport.h; path = Sources/Support/BLTNBoardSwiftSupport.h; sourceTree = "<group>"; };
-		C43B0F336703CA32F6077009E45C888D /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = Resources/Strings/de.lproj; sourceTree = "<group>"; };
-		C8F8B87433602732AC592A6DAAAAA4EE /* SVProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-umbrella.h"; sourceTree = "<group>"; };
-		C94212BD829A8EB7A07D23EA437A31C8 /* th.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = th.lproj; path = Resources/Strings/th.lproj; sourceTree = "<group>"; };
-		CD6BD95DBE6B2022AB6E74DABA46F5D6 /* BLTNBoard.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BLTNBoard.h; path = Sources/BLTNBoard.h; sourceTree = "<group>"; };
-		CD7CFD29C641EEB33BB50069CAB52A9B /* Deprecations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecations.swift; path = Sources/Deprecations.swift; sourceTree = "<group>"; };
-		CE150AF6059266CCD838B4D7FDB94810 /* SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
-		D007B70F3DEA78CF056A836E3270D755 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = Resources/Strings/ja.lproj; sourceTree = "<group>"; };
-		D347770E6500C8AE1C39C98C768E4F66 /* hu.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = hu.lproj; path = Resources/Strings/hu.lproj; sourceTree = "<group>"; };
-		D6033843EC1EE7E94FFB137B6D085DC9 /* BLTNItemManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BLTNItemManager.swift; path = Sources/BLTNItemManager.swift; sourceTree = "<group>"; };
-		D6E839864EE09C8CE0528DE01FD9241A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		D804E1D0BDC160CB13BD6016F78C0E35 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVRadialGradientLayer.h; path = SVProgressHUD/SVRadialGradientLayer.h; sourceTree = "<group>"; };
-		DAA2909AA91CE5A73A4513FA11D8931B /* CloseGlyph.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = CloseGlyph.png; path = Resources/CloseGlyph.png; sourceTree = "<group>"; };
-		DB9F4077AA97EE76AF5649753537B6FC /* BLTNContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BLTNContainerView.swift; path = Sources/Support/Views/Public/BLTNContainerView.swift; sourceTree = "<group>"; };
-		DC790167254FA1985E2AFAA624F9FFFE /* BulletinBoard-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BulletinBoard-umbrella.h"; sourceTree = "<group>"; };
-		DF94EB40F714C47DA96B2F8CACEC541D /* UIButton+BackgroundColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+BackgroundColor.swift"; path = "Sources/Support/Helpers/UIButton+BackgroundColor.swift"; sourceTree = "<group>"; };
-		E3C68C69D59A39F5929CA86B6FC8D786 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressAnimatedView.h; path = SVProgressHUD/SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		A183AE00424324DEB105DD273E75B0B7 /* AnimationChain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationChain.swift; path = Sources/Support/Animations/AnimationChain.swift; sourceTree = "<group>"; };
+		A8A4B0682D2B3D8EB2449B7BD96FDA4F /* vi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = vi.lproj; path = Resources/Strings/vi.lproj; sourceTree = "<group>"; };
+		A9BE35AD6A951349579A1D1A6C88CD53 /* BulletinViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BulletinViewController.swift; path = Sources/Support/BulletinViewController.swift; sourceTree = "<group>"; };
+		AB174F01CB628154CE8ECCE8DC8E4923 /* BulletinSwipeInteractionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BulletinSwipeInteractionController.swift; path = Sources/Support/Animations/BulletinSwipeInteractionController.swift; sourceTree = "<group>"; };
+		AB17A717B58E168F21A4509792319D16 /* BLTNPageItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BLTNPageItem.m; path = Sources/Models/BLTNPageItem.m; sourceTree = "<group>"; };
+		ADD574038B28F88441EA1D8E06D61054 /* ro.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ro.lproj; path = Resources/Strings/ro.lproj; sourceTree = "<group>"; };
+		AEF651CF02FDC18426B715428887511C /* BLTNHighlightButtonWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BLTNHighlightButtonWrapper.swift; path = Sources/Support/Views/Public/BLTNHighlightButtonWrapper.swift; sourceTree = "<group>"; };
+		AFEB213156413558431FAD277D3F5221 /* CloseGlyph@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "CloseGlyph@2x.png"; path = "Resources/CloseGlyph@2x.png"; sourceTree = "<group>"; };
+		B096667124BE77054829655AA9FCC8F9 /* CloseGlyph@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "CloseGlyph@3x.png"; path = "Resources/CloseGlyph@3x.png"; sourceTree = "<group>"; };
+		B6FA5D8A05057CC9EF772F89EC42C94E /* UIButton+BackgroundColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+BackgroundColor.swift"; path = "Sources/Support/Helpers/UIButton+BackgroundColor.swift"; sourceTree = "<group>"; };
+		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		BE5FFD4D2715C05FC6A54E57246F56B5 /* BLTNBoardSwiftSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BLTNBoardSwiftSupport.h; path = Sources/Support/BLTNBoardSwiftSupport.h; sourceTree = "<group>"; };
+		C43E274E36E05AE2114C210983FD1F69 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = Resources/Strings/es.lproj; sourceTree = "<group>"; };
+		C529A78BB1B02BA89E3F5440FC9A75AD /* BulletinBoard.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BulletinBoard.xcconfig; sourceTree = "<group>"; };
+		C5F39069CB33C34DD3874AECEA6BA610 /* ActivityIndicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActivityIndicator.swift; path = Sources/Support/Views/Internal/ActivityIndicator.swift; sourceTree = "<group>"; };
+		CA3B2A80CED159485D967F3BAAB09616 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = Resources/Strings/it.lproj; sourceTree = "<group>"; };
+		D12CF0E0D8DD980BC3A49F163426D39B /* BLTNBackgroundViewStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BLTNBackgroundViewStyle.swift; path = Sources/Appearance/BLTNBackgroundViewStyle.swift; sourceTree = "<group>"; };
+		D556ABA6854EF1824441716AE693ECC6 /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hant.lproj"; path = "Resources/Strings/zh-Hant.lproj"; sourceTree = "<group>"; };
+		D9AAFA56574B3A8BB4665260A98A08D5 /* BulletinBoard.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BulletinBoard.modulemap; sourceTree = "<group>"; };
+		DA307940C04A386A9420C57BAA9F42C5 /* BLTNContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BLTNContainerView.swift; path = Sources/Support/Views/Public/BLTNContainerView.swift; sourceTree = "<group>"; };
+		DBF579C8C44C0A0DF26D41CF22A6E359 /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = sv.lproj; path = Resources/Strings/sv.lproj; sourceTree = "<group>"; };
+		DC6028EEB343BE051550931A6CAC369F /* BLTNPageItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BLTNPageItem.h; path = Sources/Models/BLTNPageItem.h; sourceTree = "<group>"; };
+		E0E2ADE27C687DF4A081FDFA77E90AFE /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = Resources/Strings/ja.lproj; sourceTree = "<group>"; };
+		E1468E092FD050FB8E00A03A8F22DC5B /* BLTNTitleLabelContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BLTNTitleLabelContainer.swift; path = Sources/Support/Views/Public/BLTNTitleLabelContainer.swift; sourceTree = "<group>"; };
+		E3EF0069B217E4400919BD6EB74C883E /* Pods_TaskApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TaskApp.framework; path = "Pods-TaskApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E60E6B7E14EC9A90472B10440BBDB61C /* Pods-TaskApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaskApp.debug.xcconfig"; sourceTree = "<group>"; };
-		E6B906C5AB7A37835BC98E6BC85967AA /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SVProgressHUD.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E826AE0196CB3540E72242664FBD3F32 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		E8B84EE0FDD8462324CE830AB77E9758 /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
-		E98A71CCD8F4447CE12106411DFF24B6 /* BLTNActionItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BLTNActionItem.h; path = Sources/Models/BLTNActionItem.h; sourceTree = "<group>"; };
-		EB3EFF81C6EC7B25F49ECC6414B1E632 /* BLTNItemAppearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BLTNItemAppearance.swift; path = Sources/Appearance/BLTNItemAppearance.swift; sourceTree = "<group>"; };
-		EB966E300AC4CA696F384E37EBD29D5E /* UIColor+Luminance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Luminance.swift"; path = "Sources/Support/Helpers/UIColor+Luminance.swift"; sourceTree = "<group>"; };
-		ECA7DFDAF75A2F39E4949C64DB901EDA /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = sv.lproj; path = Resources/Strings/sv.lproj; sourceTree = "<group>"; };
-		EDAF3640C92A47460F40C8DA1AA237F9 /* CloseGlyph@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "CloseGlyph@3x.png"; path = "Resources/CloseGlyph@3x.png"; sourceTree = "<group>"; };
-		EE2D92918E0D9DFF9627B108C647B649 /* SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.xcconfig; sourceTree = "<group>"; };
-		EFA6202707A920F2066D9E209F2659C0 /* BLTNSpacing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BLTNSpacing.swift; path = Sources/Appearance/BLTNSpacing.swift; sourceTree = "<group>"; };
-		F16F8725FF2B7A4CBDDC621FEED63DEC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6C436AABA5C94ED18DB9559A86C014E /* ca.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ca.lproj; path = Resources/Strings/ca.lproj; sourceTree = "<group>"; };
+		E82F6F181A2568255C1DC7868A78EAF0 /* BulletinBoard-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BulletinBoard-dummy.m"; sourceTree = "<group>"; };
+		EEF53AC9BF47040E4AC652DCC92BC1BA /* BLTNBoard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BLTNBoard.framework; path = BulletinBoard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0CBA81B0EB434B47ECEC2DF63F8C1D0 /* BLTNItemAppearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BLTNItemAppearance.swift; path = Sources/Appearance/BLTNItemAppearance.swift; sourceTree = "<group>"; };
 		F1E9323E37A8ABB13ECF328B580F1CB5 /* Pods-TaskApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TaskApp-frameworks.sh"; sourceTree = "<group>"; };
-		F31EC225BFA8EEDD57A1497218AF473D /* ActivityIndicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActivityIndicator.swift; path = Sources/Support/Views/Internal/ActivityIndicator.swift; sourceTree = "<group>"; };
-		F32FFC6DFFB8B4B20EC08C1592CA7219 /* BulletinSwipeInteractionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BulletinSwipeInteractionController.swift; path = Sources/Support/Animations/BulletinSwipeInteractionController.swift; sourceTree = "<group>"; };
-		FD9652AB24B9ED741C5F7D63A8FF0E87 /* ro.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ro.lproj; path = Resources/Strings/ro.lproj; sourceTree = "<group>"; };
-		FE1C2C258A0805FBD6373DC31E82955B /* BLTNInterfaceBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BLTNInterfaceBuilder.swift; path = Sources/Appearance/BLTNInterfaceBuilder.swift; sourceTree = "<group>"; };
+		F2B9B74BF0A6614035DC6623B07308DB /* ms.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ms.lproj; path = Resources/Strings/ms.lproj; sourceTree = "<group>"; };
+		FB1CF0BB876086B581B7336D8B54D4F6 /* hi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = hi.lproj; path = Resources/Strings/hi.lproj; sourceTree = "<group>"; };
+		FDCDDD1FCE7475A374CAC7DC27D1B5F9 /* ar.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ar.lproj; path = Resources/Strings/ar.lproj; sourceTree = "<group>"; };
+		FE2B8892FA0515172FBF3BD1F8B70C28 /* BLTNSpacing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BLTNSpacing.swift; path = Sources/Appearance/BLTNSpacing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		39CF08EC23CE233DF31438979174C9B6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6E55AD05A8230D2BBA943B7A609FBF4C /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		86B927DEBF0494752574F6236A5A0663 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C0BFECD69852676F06583E2DEF5AB1EF /* Foundation.framework in Frameworks */,
-				2BB4F796B3B7F0BAA475B8FB6F9A7D8B /* QuartzCore.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BC5AC99976EEC4E22731C6B1BD9AD6B2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				807A7B1CA5063725529158A5CE5722C8 /* Foundation.framework in Frameworks */,
 				B9BB837C5F276943916ABE4A708E0EE8 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C206D6481DB1B498467CEC6FFC14E94E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92A7DCC75D650924994AE8E6C476AC6C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,156 +219,133 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+		10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9EBF83A17FAAD0333B507DD3E1099181 /* iOS */,
+				908E902E026C5C22904CF9014A5604AD /* Foundation.framework */,
+				BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */,
 			);
-			name = Frameworks;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		5764F6B7B16513318EAE4B453222ABA7 /* Support Files */ = {
+		26D21758327CE6ACCF5049B955A1C4A6 /* BulletinBoard */ = {
 			isa = PBXGroup;
 			children = (
-				2E3ABB02A74DF289763CE4FCDFC46D4F /* Info.plist */,
-				A83E001AFBC6065D6C4CA0B1151B7430 /* SVProgressHUD.modulemap */,
-				EE2D92918E0D9DFF9627B108C647B649 /* SVProgressHUD.xcconfig */,
-				CE150AF6059266CCD838B4D7FDB94810 /* SVProgressHUD-dummy.m */,
-				AD5ED0EA0663A5782728DD3D191E29E5 /* SVProgressHUD-prefix.pch */,
-				C8F8B87433602732AC592A6DAAAAA4EE /* SVProgressHUD-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SVProgressHUD";
-			sourceTree = "<group>";
-		};
-		580D1C19562E16C5EF1E7692F79631EE /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				079174F26C94C93F9B24A98FD1694982 /* SVProgressHUD.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		5F124C0A427AD6135F1EB8C8DE81B7C0 /* BulletinBoard */ = {
-			isa = PBXGroup;
-			children = (
-				F31EC225BFA8EEDD57A1497218AF473D /* ActivityIndicator.swift */,
-				0A40F2F33A76C390537DDF8C9794F315 /* AnimationChain.swift */,
-				E98A71CCD8F4447CE12106411DFF24B6 /* BLTNActionItem.h */,
-				20F54C3FC10B9537A2FC4CA7B353539F /* BLTNActionItem.m */,
-				7042A8A7487866D6F147685B5844C657 /* BLTNBackgroundViewStyle.swift */,
-				CD6BD95DBE6B2022AB6E74DABA46F5D6 /* BLTNBoard.h */,
-				BD745FE047723F1938F849E3304AD49B /* BLTNBoardSwiftSupport.h */,
-				DB9F4077AA97EE76AF5649753537B6FC /* BLTNContainerView.swift */,
-				311AE8C20137DD238BF8FDB5E4216959 /* BLTNHighlightButtonWrapper.swift */,
-				FE1C2C258A0805FBD6373DC31E82955B /* BLTNInterfaceBuilder.swift */,
-				31101752208EC0640F903D68D6CA12BD /* BLTNItem.h */,
-				EB3EFF81C6EC7B25F49ECC6414B1E632 /* BLTNItemAppearance.swift */,
-				D6033843EC1EE7E94FFB137B6D085DC9 /* BLTNItemManager.swift */,
-				00695014F0365A4170CC5C6F1F869E16 /* BLTNPageItem.h */,
-				790402D0C23010E8C75A7288820E6709 /* BLTNPageItem.m */,
-				EFA6202707A920F2066D9E209F2659C0 /* BLTNSpacing.swift */,
-				4D6FEB486BBBDB318CBBC1840F3D0101 /* BLTNTitleLabelContainer.swift */,
-				22A2C1634DAF27E3D686E689B7C20CA0 /* BLTNViewPosition.swift */,
-				537F4C77728C34ADFCA3D604CD54E534 /* BulletinBackgroundView.swift */,
-				ABD0C14E145B9D0392321BD07DDB3DE5 /* BulletinCloseButton.swift */,
-				03C53A051A520F1719CFFAA5067505FF /* BulletinDismissAnimationController.swift */,
-				3607B7CAC38E8D623F41798909527841 /* BulletinPresentationAnimationController.swift */,
-				F32FFC6DFFB8B4B20EC08C1592CA7219 /* BulletinSwipeInteractionController.swift */,
-				293328F77F04B8EC7E6D4987831E7D58 /* BulletinViewController.swift */,
-				2BA234D58C316F80E854C2CBA4F34AB0 /* ContinuousMaskLayer.swift */,
-				CD7CFD29C641EEB33BB50069CAB52A9B /* Deprecations.swift */,
-				B8EC474D1196EED1F6A07AFDA95AAE54 /* HighlightButton.swift */,
-				34A31664A293FA2F130B5601EBEB9CE3 /* Highlighter.swift */,
-				647345F4B5444C1491869002C9992E9A /* RoundedViewProtocol.swift */,
-				DF94EB40F714C47DA96B2F8CACEC541D /* UIButton+BackgroundColor.swift */,
-				EB966E300AC4CA696F384E37EBD29D5E /* UIColor+Luminance.swift */,
-				4FD9F09660AB058AA4EBEF6D6EB91752 /* UIView+RoundedView.swift */,
-				8D99860222BE9B0DF13B5A142004BB1B /* UIView+SafeAnchors.swift */,
-				91F9F1E1E6AD1D412C5B46E892AEE12D /* Resources */,
-				7E37204E4F9A4A489ECC2C5B6912326C /* Support Files */,
+				C5F39069CB33C34DD3874AECEA6BA610 /* ActivityIndicator.swift */,
+				A183AE00424324DEB105DD273E75B0B7 /* AnimationChain.swift */,
+				269B4C69B5174ECFD3A3A3E345557CC8 /* BLTNActionItem.h */,
+				56D32EAE54D8E8ABF9FC7D3AF05885F0 /* BLTNActionItem.m */,
+				D12CF0E0D8DD980BC3A49F163426D39B /* BLTNBackgroundViewStyle.swift */,
+				7B3E485D3FA97C87A868710B4D7CBD8F /* BLTNBoard.h */,
+				BE5FFD4D2715C05FC6A54E57246F56B5 /* BLTNBoardSwiftSupport.h */,
+				DA307940C04A386A9420C57BAA9F42C5 /* BLTNContainerView.swift */,
+				AEF651CF02FDC18426B715428887511C /* BLTNHighlightButtonWrapper.swift */,
+				00CABC588981A08E22EF4818622F528D /* BLTNInterfaceBuilder.swift */,
+				9BEF4217FC7A60E71FBFF70B45C21CB8 /* BLTNItem.h */,
+				F0CBA81B0EB434B47ECEC2DF63F8C1D0 /* BLTNItemAppearance.swift */,
+				44E5E8E71888B0830C4E407E46BBCB73 /* BLTNItemManager.swift */,
+				DC6028EEB343BE051550931A6CAC369F /* BLTNPageItem.h */,
+				AB17A717B58E168F21A4509792319D16 /* BLTNPageItem.m */,
+				FE2B8892FA0515172FBF3BD1F8B70C28 /* BLTNSpacing.swift */,
+				E1468E092FD050FB8E00A03A8F22DC5B /* BLTNTitleLabelContainer.swift */,
+				3FECFD04070E6B293A579FDEF21F1E6F /* BLTNViewPosition.swift */,
+				1FC8F3C59F10BD34DB398913176EF414 /* BulletinBackgroundView.swift */,
+				6D62EAD49C20FCBE217BD02F877993F4 /* BulletinCloseButton.swift */,
+				407D3EFB59387733597AB0DD4D997F8E /* BulletinDismissAnimationController.swift */,
+				5B6EF2A2F0C0140CD438AB5760622BA1 /* BulletinPresentationAnimationController.swift */,
+				AB174F01CB628154CE8ECCE8DC8E4923 /* BulletinSwipeInteractionController.swift */,
+				A9BE35AD6A951349579A1D1A6C88CD53 /* BulletinViewController.swift */,
+				3B5DC93DB1E051DD2C4BEB2807E87783 /* ContinuousMaskLayer.swift */,
+				51B19D0C185313BEA3362A0FE5549283 /* Deprecations.swift */,
+				8BC3BB8649C8CFD024783694BAF2EA96 /* HighlightButton.swift */,
+				664CDAF89EF2FC753E676E630D2F2FDB /* Highlighter.swift */,
+				2CCADDFEA62EA05F364AC2A3FA9FD152 /* RoundedViewProtocol.swift */,
+				B6FA5D8A05057CC9EF772F89EC42C94E /* UIButton+BackgroundColor.swift */,
+				4E21AC60DFE06E0948E5071B80163BCC /* UIColor+Luminance.swift */,
+				6B79F3E3F666D8150DF9293C4980C89E /* UIView+RoundedView.swift */,
+				4EE28C12126A3FCEA0F1EDD789E6D1A0 /* UIView+SafeAnchors.swift */,
+				B3BB7E17678B81D389F4C98B960A5EC7 /* Resources */,
+				CD503DBD7E58982A6C7E70DD44335B92 /* Support Files */,
 			);
 			name = BulletinBoard;
 			path = BulletinBoard;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				D6B0E554B9440380F821E01C24846849 /* Pods */,
-				DB4914D06C5B3090C92730E3ABBB1BCD /* Products */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				F60764DB28C64BEDBD1A4C4472CFD39E /* Pods */,
+				F8EFF5FA1671C7460AFBAF1CA6133864 /* Products */,
 				0E2DEF7FF31D5C4165B03BE706DA1938 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7E37204E4F9A4A489ECC2C5B6912326C /* Support Files */ = {
+		B3BB7E17678B81D389F4C98B960A5EC7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				ABB985B397C7FBE481A2534904FF7ECC /* BulletinBoard.modulemap */,
-				9192B5370F7C2141B0120A3FD51038BC /* BulletinBoard.xcconfig */,
-				06CED6A441FD9602CE028624B4953F70 /* BulletinBoard-dummy.m */,
-				67646CB632738FB48C194A0E6CF7161C /* BulletinBoard-prefix.pch */,
-				DC790167254FA1985E2AFAA624F9FFFE /* BulletinBoard-umbrella.h */,
-				F16F8725FF2B7A4CBDDC621FEED63DEC /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/BulletinBoard";
-			sourceTree = "<group>";
-		};
-		91F9F1E1E6AD1D412C5B46E892AEE12D /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				3202711F1DE63CDC3B4ED3AF96B016FC /* ar.lproj */,
-				632108BA19CD28834A2739430D601F8E /* ca.lproj */,
-				DAA2909AA91CE5A73A4513FA11D8931B /* CloseGlyph.png */,
-				AEF52667D1CF21A254A8FA5B84225A29 /* CloseGlyph@2x.png */,
-				EDAF3640C92A47460F40C8DA1AA237F9 /* CloseGlyph@3x.png */,
-				1EB982A80FE270D39EC94FCE2E256B2E /* cs.lproj */,
-				5EEEA5003BECF1FB5FE73B2E8F05747A /* da.lproj */,
-				C43B0F336703CA32F6077009E45C888D /* de.lproj */,
-				061FF0DEEA3EE8066DE944053769E111 /* el.lproj */,
-				973E7D7AF8DAE29A1DFEE4D7FB0AD473 /* en.lproj */,
-				80CC119199C9D89D9DBA2359EDF4A6DA /* es.lproj */,
-				B30D612B47394621D0B9B1A7207C365C /* fi.lproj */,
-				228E20D789314521E899939B88BBAEE9 /* fr.lproj */,
-				96CAD90240F61D8542AE62E42EE885D7 /* he.lproj */,
-				9C9651D022519D7C6CC717C1093473FE /* hi.lproj */,
-				6106B85F45FA4895024B9255CBFABCBC /* hr.lproj */,
-				D347770E6500C8AE1C39C98C768E4F66 /* hu.lproj */,
-				75283C888DBD3B4C3580300EBC2CD9D7 /* id.lproj */,
-				AC6F6AE3FA50E47FB42C6FAC8503B1F5 /* it.lproj */,
-				D007B70F3DEA78CF056A836E3270D755 /* ja.lproj */,
-				4140136E45EBAAE20DDEFB3DA46A853B /* ko.lproj */,
-				5A2DAB33DD2B11C49A9D3C64217ED615 /* ms.lproj */,
-				257C55B66E1D7746C724D29EDA398F92 /* nb.lproj */,
-				17A8FCC8647CE199F61933D135846CA5 /* nl.lproj */,
-				224A2980F0E3E9F40D54B72FDBFB74D8 /* pl.lproj */,
-				373E17DCBE2A7C10423B1E14BAAE8E47 /* pt-BR.lproj */,
-				9B9994D866961E896F06A1F867A7F4B1 /* pt-PT.lproj */,
-				FD9652AB24B9ED741C5F7D63A8FF0E87 /* ro.lproj */,
-				72C70A3343B37ABBC97C82265A930A7A /* ru.lproj */,
-				19438BC66D2A18455B7CBDD6DF31958A /* sk.lproj */,
-				ECA7DFDAF75A2F39E4949C64DB901EDA /* sv.lproj */,
-				C94212BD829A8EB7A07D23EA437A31C8 /* th.lproj */,
-				5BB518B5DA7D48F65D281818382D5D6F /* tr.lproj */,
-				28EEC1619B6858950856AD6ACACD2B84 /* uk.lproj */,
-				46DEA0A655B070A6DED34D961E9BD39B /* vi.lproj */,
-				4EEB1C4D1CF3DB8262191FC660E94DDC /* zh-Hans.lproj */,
-				62E20AF1DA01E1A76A3843C87121432A /* zh-Hant.lproj */,
+				FDCDDD1FCE7475A374CAC7DC27D1B5F9 /* ar.lproj */,
+				E6C436AABA5C94ED18DB9559A86C014E /* ca.lproj */,
+				316A610658B5FEBE06CDD5F499BEBCDA /* CloseGlyph.png */,
+				AFEB213156413558431FAD277D3F5221 /* CloseGlyph@2x.png */,
+				B096667124BE77054829655AA9FCC8F9 /* CloseGlyph@3x.png */,
+				3889E1BB925C71CEC3FB141470AB552B /* cs.lproj */,
+				405BE36EDA5F4A2217454B73033B9755 /* da.lproj */,
+				1DB386CE26E698E8E45D82E8BEBCBC9E /* de.lproj */,
+				7B42642D1EDB567047AC2615835CA961 /* el.lproj */,
+				0E188A71EE0D335FC3D99131FF5811D7 /* en.lproj */,
+				C43E274E36E05AE2114C210983FD1F69 /* es.lproj */,
+				458BADF0849AF97969784232F2FAE050 /* fi.lproj */,
+				6A1E71FDC6FA943D647E688CDD8B7A42 /* fr.lproj */,
+				64E56E2A51FEE1A0B0AB1DE208BB3BBD /* he.lproj */,
+				FB1CF0BB876086B581B7336D8B54D4F6 /* hi.lproj */,
+				64C77C66EB948E281591A130E28F3970 /* hr.lproj */,
+				6ACCFC888979111B100FF8ABED34E96D /* hu.lproj */,
+				1BD34FA930CB438808B6BE4B471DF2D3 /* id.lproj */,
+				CA3B2A80CED159485D967F3BAAB09616 /* it.lproj */,
+				E0E2ADE27C687DF4A081FDFA77E90AFE /* ja.lproj */,
+				02B7532576B8844DFF721044F056999B /* ko.lproj */,
+				F2B9B74BF0A6614035DC6623B07308DB /* ms.lproj */,
+				2C7BB6B1E8AA3788D3694E112DE33451 /* nb.lproj */,
+				3FE9074C7BFF23B541CCC082A38881BC /* nl.lproj */,
+				4E9223AD99700BBD02C28F6BB918FA07 /* pl.lproj */,
+				209917AC64418B8A8D61EB6AB9D2FA56 /* pt-BR.lproj */,
+				9F6372418122A1B524DB7F631C2D88F2 /* pt-PT.lproj */,
+				ADD574038B28F88441EA1D8E06D61054 /* ro.lproj */,
+				3EC2F005B14D9750197DA2B69A2B640B /* ru.lproj */,
+				7DF9CE86CFD76FE9904578B2CB9867D9 /* sk.lproj */,
+				DBF579C8C44C0A0DF26D41CF22A6E359 /* sv.lproj */,
+				035238FD254F590BE76EA39CDB6E6462 /* th.lproj */,
+				4E0498E211A16FE2D0362F8F0E3E0B8E /* tr.lproj */,
+				211F74E0F6BA32366B4B02DA317D247F /* uk.lproj */,
+				A8A4B0682D2B3D8EB2449B7BD96FDA4F /* vi.lproj */,
+				0A1F483CB6063CFFD38156F4EF09D8A4 /* zh-Hans.lproj */,
+				D556ABA6854EF1824441716AE693ECC6 /* zh-Hant.lproj */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		9EBF83A17FAAD0333B507DD3E1099181 /* iOS */ = {
+		CD503DBD7E58982A6C7E70DD44335B92 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				90C7A160ABE5DAC85DC33E762CF55AE1 /* Foundation.framework */,
-				D6E839864EE09C8CE0528DE01FD9241A /* QuartzCore.framework */,
-				E826AE0196CB3540E72242664FBD3F32 /* UIKit.framework */,
+				D9AAFA56574B3A8BB4665260A98A08D5 /* BulletinBoard.modulemap */,
+				C529A78BB1B02BA89E3F5440FC9A75AD /* BulletinBoard.xcconfig */,
+				E82F6F181A2568255C1DC7868A78EAF0 /* BulletinBoard-dummy.m */,
+				199620CC03E084D3002D7C6E99A94253 /* BulletinBoard-prefix.pch */,
+				57231CC305619119F0005AFB26BDF44B /* BulletinBoard-umbrella.h */,
+				60F34327BB885720D209B0B6980C111E /* Info.plist */,
 			);
-			name = iOS;
+			name = "Support Files";
+			path = "../Target Support Files/BulletinBoard";
 			sourceTree = "<group>";
 		};
 		D0C6A073FE15AB5B1D4B35556979CE6D /* Pods-TaskApp */ = {
@@ -435,66 +366,26 @@
 			path = "Target Support Files/Pods-TaskApp";
 			sourceTree = "<group>";
 		};
-		D6B0E554B9440380F821E01C24846849 /* Pods */ = {
+		F60764DB28C64BEDBD1A4C4472CFD39E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5F124C0A427AD6135F1EB8C8DE81B7C0 /* BulletinBoard */,
-				FCC16B9F584FC06DDE08BDC507D277F8 /* SVProgressHUD */,
+				26D21758327CE6ACCF5049B955A1C4A6 /* BulletinBoard */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		DB4914D06C5B3090C92730E3ABBB1BCD /* Products */ = {
+		F8EFF5FA1671C7460AFBAF1CA6133864 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2AB8EA078E0280F04B6767CA5EF7D687 /* BLTNBoard.framework */,
-				530051E8B31C8A51025B2D07AB4CEC5C /* Pods_TaskApp.framework */,
-				E6B906C5AB7A37835BC98E6BC85967AA /* SVProgressHUD.framework */,
+				EEF53AC9BF47040E4AC652DCC92BC1BA /* BLTNBoard.framework */,
+				E3EF0069B217E4400919BD6EB74C883E /* Pods_TaskApp.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		FCC16B9F584FC06DDE08BDC507D277F8 /* SVProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				23B064584EA9D6995E90445B6ADF81E5 /* SVIndefiniteAnimatedView.h */,
-				3169745969A1AA6D0EB90277A8D4A54E /* SVIndefiniteAnimatedView.m */,
-				E3C68C69D59A39F5929CA86B6FC8D786 /* SVProgressAnimatedView.h */,
-				302FD743F3E2FC9DEC373BD1B74B94C6 /* SVProgressAnimatedView.m */,
-				1665BD2E9FB529F68B88D303F9CF8B79 /* SVProgressHUD.h */,
-				E8B84EE0FDD8462324CE830AB77E9758 /* SVProgressHUD.m */,
-				D804E1D0BDC160CB13BD6016F78C0E35 /* SVRadialGradientLayer.h */,
-				1D5D6412AC4AC1DA038DF0E3B5701630 /* SVRadialGradientLayer.m */,
-				580D1C19562E16C5EF1E7692F79631EE /* Resources */,
-				5764F6B7B16513318EAE4B453222ABA7 /* Support Files */,
-			);
-			name = SVProgressHUD;
-			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		08CAEA59DC642370067E68C8DB7608FF /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6A7A0A01A31B343EDBCC19562CFA3C6A /* Pods-TaskApp-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0B2A5A3EA610E987A1459BBD1D6969F4 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DFCED77BCA56AE107BD74008C2B94939 /* SVIndefiniteAnimatedView.h in Headers */,
-				FEFF664E903D993CBA5A419353472C12 /* SVProgressAnimatedView.h in Headers */,
-				8916633F5FDB4BC9B36AF8463BD5B67A /* SVProgressHUD-umbrella.h in Headers */,
-				2683770668745060B9D5E8A971D0D02C /* SVProgressHUD.h in Headers */,
-				15A6E2D8B8E777FEB944BF4EA5FD4008 /* SVRadialGradientLayer.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		25554E631B0C52AF84DDA69A6D812A84 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -505,6 +396,14 @@
 				2161AEB39BADC8EB50F7080D43C2C897 /* BLTNItem.h in Headers */,
 				CBDAFEF8C66A614712F259350B44C5AD /* BLTNPageItem.h in Headers */,
 				6CFFDB524FF3568148C99F4F498CD158 /* BulletinBoard-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		680B8E7AC030A4DD9ED9DEB91DA5FF39 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CCC2831B74B5744FE3F060467E7712D /* Pods-TaskApp-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,45 +425,26 @@
 			);
 			name = BulletinBoard;
 			productName = BulletinBoard;
-			productReference = 2AB8EA078E0280F04B6767CA5EF7D687 /* BLTNBoard.framework */;
+			productReference = EEF53AC9BF47040E4AC652DCC92BC1BA /* BLTNBoard.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8CCDA15781314B4DF76A8A361438AB8C /* Pods-TaskApp */ = {
+		F7B3BB997E63F4CF36C4C6FB057C9E7C /* Pods-TaskApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7DC201A1B0EF28C04CDBE5EF703E9483 /* Build configuration list for PBXNativeTarget "Pods-TaskApp" */;
+			buildConfigurationList = DFCFC2FEC5739E1A476318EC2DA0EFF7 /* Build configuration list for PBXNativeTarget "Pods-TaskApp" */;
 			buildPhases = (
-				08CAEA59DC642370067E68C8DB7608FF /* Headers */,
-				09C676CD52E926684564AF37A496E256 /* Sources */,
-				39CF08EC23CE233DF31438979174C9B6 /* Frameworks */,
-				F58CD46213229A503184C1D4F9A17FF6 /* Resources */,
+				680B8E7AC030A4DD9ED9DEB91DA5FF39 /* Headers */,
+				8CC6D57C28957C169247B02F937E403A /* Sources */,
+				C206D6481DB1B498467CEC6FFC14E94E /* Frameworks */,
+				3E149FCDBE20DD816616252C81CB0032 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E2E45B8FBBD40E69F488DA4071398683 /* PBXTargetDependency */,
-				FB6CE24E3F38F8366A2241A657E6E86C /* PBXTargetDependency */,
+				955491AC08788E33F0675859841959A9 /* PBXTargetDependency */,
 			);
 			name = "Pods-TaskApp";
 			productName = "Pods-TaskApp";
-			productReference = 530051E8B31C8A51025B2D07AB4CEC5C /* Pods_TaskApp.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		92983F66C7BADEFBB497E96914D51221 /* SVProgressHUD */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EB1ABDE040B19D2EF4BEAC2987218425 /* Build configuration list for PBXNativeTarget "SVProgressHUD" */;
-			buildPhases = (
-				0B2A5A3EA610E987A1459BBD1D6969F4 /* Headers */,
-				21407359E4CFC872276974B0F295BBC5 /* Sources */,
-				86B927DEBF0494752574F6236A5A0663 /* Frameworks */,
-				610D0F0ED3B9D7243695F7BB5FB3A1C4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SVProgressHUD;
-			productName = SVProgressHUD;
-			productReference = E6B906C5AB7A37835BC98E6BC85967AA /* SVProgressHUD.framework */;
+			productReference = E3EF0069B217E4400919BD6EB74C883E /* Pods_TaskApp.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -584,18 +464,24 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = DB4914D06C5B3090C92730E3ABBB1BCD /* Products */;
+			productRefGroup = F8EFF5FA1671C7460AFBAF1CA6133864 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				6488D87346DC99464D1D55C47589C8A5 /* BulletinBoard */,
-				8CCDA15781314B4DF76A8A361438AB8C /* Pods-TaskApp */,
-				92983F66C7BADEFBB497E96914D51221 /* SVProgressHUD */,
+				F7B3BB997E63F4CF36C4C6FB057C9E7C /* Pods-TaskApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3E149FCDBE20DD816616252C81CB0032 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		59AEE014EDD9F930DD9FFB9D82AC205C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -640,44 +526,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		610D0F0ED3B9D7243695F7BB5FB3A1C4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2A1988C91EFB49B08AF409A6764A0B43 /* SVProgressHUD.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F58CD46213229A503184C1D4F9A17FF6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		09C676CD52E926684564AF37A496E256 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5756E195980F49D6B9ADE36F324CD734 /* Pods-TaskApp-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		21407359E4CFC872276974B0F295BBC5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BCA1A0188BC8D99F796324FA97522530 /* SVIndefiniteAnimatedView.m in Sources */,
-				8F129FC2DD6B3F5E72FCD815E6662B80 /* SVProgressAnimatedView.m in Sources */,
-				83A134D346D96DB8CCA77D8E1800F7EB /* SVProgressHUD-dummy.m in Sources */,
-				34CDC93200292B7E8693F7B728B3EDEE /* SVProgressHUD.m in Sources */,
-				B288D529A5EDFF783F96A44D99D4286A /* SVRadialGradientLayer.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		29411722F1D62027B382E68A60B76FEC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -714,27 +565,69 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8CC6D57C28957C169247B02F937E403A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D6DBB13EA68BD84653C5A6506919A8 /* Pods-TaskApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E2E45B8FBBD40E69F488DA4071398683 /* PBXTargetDependency */ = {
+		955491AC08788E33F0675859841959A9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BulletinBoard;
 			target = 6488D87346DC99464D1D55C47589C8A5 /* BulletinBoard */;
-			targetProxy = 686A27B24DCA8F342BB39F6C4325A322 /* PBXContainerItemProxy */;
-		};
-		FB6CE24E3F38F8366A2241A657E6E86C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SVProgressHUD;
-			target = 92983F66C7BADEFBB497E96914D51221 /* SVProgressHUD */;
-			targetProxy = CC7417DFCCF66ACE91A86C63ACD16A9D /* PBXContainerItemProxy */;
+			targetProxy = BF1702315772AA0792905F701A376B6B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0D37EE61CC4B65C00CC23B55CA10E819 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E60E6B7E14EC9A90472B10440BBDB61C /* Pods-TaskApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TaskApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TaskApp/Pods-TaskApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		0F7E0096E9FB0570032027D63A68FB34 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9192B5370F7C2141B0120A3FD51038BC /* BulletinBoard.xcconfig */;
+			baseConfigurationReference = C529A78BB1B02BA89E3F5440FC9A75AD /* BulletinBoard.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -768,7 +661,45 @@
 			};
 			name = Debug;
 		};
-		40CB987765BC96123E1739A43CB18C1F /* Release */ = {
+		A995D1CD10C04A522FDFE36F97ACB315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C529A78BB1B02BA89E3F5440FC9A75AD /* BulletinBoard.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BulletinBoard/BulletinBoard-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BulletinBoard/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BulletinBoard/BulletinBoard.modulemap";
+				PRODUCT_MODULE_NAME = BLTNBoard;
+				PRODUCT_NAME = BLTNBoard;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AFE0EC43AC51492792C54A74E8527500 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8EF2DB3E11A61761AB6D0B280EAABAB7 /* Pods-TaskApp.release.xcconfig */;
 			buildSettings = {
@@ -808,120 +739,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		83FA54E05F402C44BAFF75F0840AC4CD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE2D92918E0D9DFF9627B108C647B649 /* SVProgressHUD.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
-				PRODUCT_MODULE_NAME = SVProgressHUD;
-				PRODUCT_NAME = SVProgressHUD;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A995D1CD10C04A522FDFE36F97ACB315 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9192B5370F7C2141B0120A3FD51038BC /* BulletinBoard.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/BulletinBoard/BulletinBoard-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BulletinBoard/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/BulletinBoard/BulletinBoard.modulemap";
-				PRODUCT_MODULE_NAME = BLTNBoard;
-				PRODUCT_NAME = BLTNBoard;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C1D115C4ADB3FC8961B77C65B67A1D61 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E60E6B7E14EC9A90472B10440BBDB61C /* Pods-TaskApp.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TaskApp/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TaskApp/Pods-TaskApp.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		C92782E717C52E3633C9A5F211E7987A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -984,41 +801,6 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		D516CC300EB7089674A90E374B3F88C5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE2D92918E0D9DFF9627B108C647B649 /* SVProgressHUD.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
-				PRODUCT_MODULE_NAME = SVProgressHUD;
-				PRODUCT_NAME = SVProgressHUD;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -1093,11 +875,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7DC201A1B0EF28C04CDBE5EF703E9483 /* Build configuration list for PBXNativeTarget "Pods-TaskApp" */ = {
+		DFCFC2FEC5739E1A476318EC2DA0EFF7 /* Build configuration list for PBXNativeTarget "Pods-TaskApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C1D115C4ADB3FC8961B77C65B67A1D61 /* Debug */,
-				40CB987765BC96123E1739A43CB18C1F /* Release */,
+				0D37EE61CC4B65C00CC23B55CA10E819 /* Debug */,
+				AFE0EC43AC51492792C54A74E8527500 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1107,15 +889,6 @@
 			buildConfigurations = (
 				0F7E0096E9FB0570032027D63A68FB34 /* Debug */,
 				A995D1CD10C04A522FDFE36F97ACB315 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EB1ABDE040B19D2EF4BEAC2987218425 /* Build configuration list for PBXNativeTarget "SVProgressHUD" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D516CC300EB7089674A90E374B3F88C5 /* Debug */,
-				83FA54E05F402C44BAFF75F0840AC4CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

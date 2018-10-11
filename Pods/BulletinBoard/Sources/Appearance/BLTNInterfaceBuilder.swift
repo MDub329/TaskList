@@ -33,7 +33,7 @@ import UIKit
         let titleLabel = UILabel()
         titleLabel.textAlignment = .center
         titleLabel.textColor = appearance.titleTextColor
-        titleLabel.accessibilityTraits |= UIAccessibilityTraits.header
+        titleLabel.accessibilityTraits |= UIAccessibilityTraitHeader
         titleLabel.numberOfLines = 2
         titleLabel.adjustsFontSizeToFitWidth = true
         titleLabel.lineBreakMode = .byWordWrapping
@@ -114,10 +114,10 @@ import UIKit
         }
 
         let wrapper = BLTNHighlightButtonWrapper(button: actionButton)
-        wrapper.setContentHuggingPriority(UILayoutPriority.defaultLow, for: .horizontal)
+        wrapper.setContentHuggingPriority(UILayoutPriorityDefaultLow, for: .horizontal)
 
         let heightConstraint = wrapper.heightAnchor.constraint(equalToConstant: 55)
-        heightConstraint.priority = UILayoutPriority.defaultHigh
+        heightConstraint.priority = UILayoutPriorityDefaultHigh
         heightConstraint.isActive = true
 
         return wrapper
@@ -187,8 +187,8 @@ import UIKit
 
         let container = BLTNContainerView()
 
-        container.contentSize = CGSize(width: width.flatMap(CGFloat.init) ?? UIView.noIntrinsicMetric,
-                                       height: height.flatMap(CGFloat.init) ?? UIView.noIntrinsicMetric)
+        container.contentSize = CGSize(width: width.flatMap(CGFloat.init) ?? UIViewNoIntrinsicMetric,
+                                       height: height.flatMap(CGFloat.init) ?? UIViewNoIntrinsicMetric)
 
         container.setChildView(view) { parent, child in
 

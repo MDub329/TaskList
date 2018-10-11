@@ -58,12 +58,12 @@ class ActivityIndicator: UIView {
     }
 
     /// The style of the activity indicator.
-    var activityIndicatorViewStyle: UIActivityIndicatorView.Style {
+    var activityIndicatorViewStyle: UIActivityIndicatorViewStyle {
         get {
-            return activityIndicatorView.style
+            return activityIndicatorView.activityIndicatorViewStyle
         }
         set {
-            activityIndicatorView.style = newValue
+            activityIndicatorView.activityIndicatorViewStyle = newValue
         }
     }
 

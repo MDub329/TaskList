@@ -8,7 +8,6 @@
 
 import UIKit
 import BLTNBoard
-import SVProgressHUD
 
 class TaskViewController: UITableViewController{
     

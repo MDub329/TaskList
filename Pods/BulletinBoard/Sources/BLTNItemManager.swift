@@ -567,7 +567,7 @@ extension BLTNItemManager {
 
             }
 
-            UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged, argument: newArrangedSubviews.first)
+            UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, newArrangedSubviews.first)
 
         }
 
