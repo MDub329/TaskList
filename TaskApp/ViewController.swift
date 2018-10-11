@@ -45,13 +45,11 @@ class TaskViewController: UITableViewController{
     
     lazy var bulletinManager: BLTNItemManager = {
         let rootItem: BLTNItem = addPage
-        
         return BLTNItemManager(rootItem: rootItem)
     }()
     
     lazy var bulletinManager2: BLTNItemManager = {
         let rootItem: BLTNItem = editPage
-        
         return BLTNItemManager(rootItem: rootItem)
     }()
 
@@ -90,7 +88,6 @@ class TaskViewController: UITableViewController{
     
     
     @objc func insert(){
-
         addPage.actionButtonTitle = "Next"
         addPage.textFieldString = ""
         addPage.textFieldString1 = ""
@@ -131,33 +128,49 @@ class TaskViewController: UITableViewController{
         }
         dueDatePage.isDismissable = false
         dueDatePage.appearance.actionButtonColor = accentBGColor
-        dueDatePage.appearance.titleTextColor = accentBGColor
+        dueDatePage.appearance.titleTextColor = .white
+        dueDatePage.appearance.actionButtonBorderColor = .white
+        dueDatePage.appearance.actionButtonBorderWidth = 2
+        dueDatePage.appearance.actionButtonCornerRadius = 5
     }
     
     func setUPEditDatePicker() {
         editDueDatePage.actionButtonTitle = "Save"
         editDueDatePage.isDismissable = false
         editDueDatePage.appearance.actionButtonColor = accentBGColor
-        editDueDatePage.appearance.titleTextColor = accentBGColor
+        editDueDatePage.appearance.titleTextColor = .white
+        editDueDatePage.appearance.actionButtonBorderWidth = 2
+        editDueDatePage.appearance.actionButtonCornerRadius = 5
+        editDueDatePage.appearance.actionButtonBorderColor = .white
     }
     
     func setUpAddPage() {
+        bulletinManager.backgroundColor = bgColor
         addPage.appearance.actionButtonColor = accentBGColor
-        addPage.appearance.titleTextColor = accentBGColor
-        addPage.textField.textColor = accentBGColor
+        addPage.appearance.actionButtonBorderColor = .white
+        addPage.appearance.actionButtonBorderWidth = 2
+        addPage.appearance.actionButtonCornerRadius = 5
+        addPage.appearance.titleTextColor = .white
+        addPage.textField.textColor = .white
+        addPage.appearance.alternativeButtonTitleColor = .white
         //addPage.textField1.textColor = accentBGColor
         addPage.next = dueDatePage
     }
     
     func setUpEditPage() {
+        bulletinManager2.backgroundColor = bgColor
         editPage.appearance.actionButtonColor = accentBGColor
-        editPage.appearance.titleTextColor = accentBGColor
+        editPage.appearance.titleTextColor = .white
         editPage.textField.textColor = accentBGColor
         editPage.textField1.textColor = accentBGColor
         editPage.next = editDueDatePage
         editPage.actionButtonTitle = "NEXT"
         editPage.alternativeButtonTitle = "Cancel"
-         editPage.isDismissable = false
+        editPage.isDismissable = false
+        editPage.appearance.actionButtonBorderColor = .white
+        editPage.appearance.actionButtonBorderWidth = 2
+        editPage.appearance.actionButtonCornerRadius = 5
+        editPage.appearance.alternativeButtonTitleColor = .white
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -178,6 +191,7 @@ class TaskViewController: UITableViewController{
         myCell.nameLabel.textColor = textColor
         myCell.nameLabel.numberOfLines = 2
         myCell.actionButton.setTitleColor(textColor, for: .normal)
+        myCell.actionButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         return myCell
     }
     
@@ -266,6 +280,8 @@ class TaskViewController: UITableViewController{
         }
         Save()
     }
+    
+    
     
 }
 

@@ -36,6 +36,11 @@ class DueDatePicker: BLTNPageItem {
     override func makeViewsUnderTitle(with interfaceBuilder: BLTNInterfaceBuilder) -> [UIView]? {
         datePicker.datePickerMode = .date
         datePicker.date = Date()
+        datePicker.setValue(UIColor.white, forKey: "textColor")
         return [datePicker]
     }
+    
+    
 }
+
+
