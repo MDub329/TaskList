@@ -43,4 +43,7 @@ class DueDatePicker: BLTNPageItem {
     
 }
 
+class confirmClear: BLTNPageItem {
+    
+}
 

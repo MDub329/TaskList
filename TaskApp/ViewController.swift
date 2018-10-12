@@ -20,6 +20,7 @@ class TaskViewController: UITableViewController{
     
     let addPage = TextFieldBLTNPage(title: "Add Task")
     let editPage = TextFieldBLTNPage(title: "Edit Task")
+    let confirmPage = BLTNPageItem(title: "Are You Sure?")
     let dueDatePage = DueDatePicker(title: "Pick Due Date")
     let editDueDatePage = DueDatePicker(title: "Edit Due Date")
     var globalFooterLabel = UILabel() //Gain access to footer Total
@@ -40,18 +41,25 @@ class TaskViewController: UITableViewController{
         setUpEditPage()
         setUpDatePicker()
         setUPEditDatePicker()
+        setUpConfirmPage()
     }
  
     
-    lazy var bulletinManager: BLTNItemManager = {
+    lazy var addPageBulletinManager: BLTNItemManager = {
         let rootItem: BLTNItem = addPage
         return BLTNItemManager(rootItem: rootItem)
     }()
     
-    lazy var bulletinManager2: BLTNItemManager = {
+    lazy var editPageBulletinManager: BLTNItemManager = {
         let rootItem: BLTNItem = editPage
         return BLTNItemManager(rootItem: rootItem)
     }()
+    
+    lazy var clearAllConfirmBulletinManager: BLTNItemManager = {
+        let rootItem: BLTNItem = confirmPage
+        return BLTNItemManager(rootItem: rootItem)
+    }()
+    
 
     func StartUp(){
         navigationItem.title = "Task List"
@@ -95,21 +103,18 @@ class TaskViewController: UITableViewController{
             if let str = self.addPage.textField.text {
                 self.items.append(str)
             }
-            self.bulletinManager.displayNextItem()
+            self.addPageBulletinManager.displayNextItem()
         }
         addPage.alternativeButtonTitle = "Cancel"
         addPage.alternativeHandler = { (item:BLTNActionItem) in
-            self.bulletinManager.dismissBulletin()
+            self.addPageBulletinManager.dismissBulletin()
         }
         addPage.isDismissable = false
-        bulletinManager.showBulletin(above: self)
+        addPageBulletinManager.showBulletin(above: self)
     }
     
     @objc func clear(){
-        items.removeAll()
-        dueDate.removeAll()
-        Save()
-        tableView.reloadData()
+        clearAllConfirmBulletinManager.showBulletin(above: self)
     }
     
     func setUpDatePicker() {
@@ -124,7 +129,7 @@ class TaskViewController: UITableViewController{
             self.Save()
             let total = String(self.items.count)
             self.globalFooterLabel.text = "Total Tasks Left: \(total)"
-            self.bulletinManager.dismissBulletin()
+            self.addPageBulletinManager.dismissBulletin()
         }
         dueDatePage.isDismissable = false
         dueDatePage.appearance.actionButtonColor = accentBGColor
@@ -145,7 +150,7 @@ class TaskViewController: UITableViewController{
     }
     
     func setUpAddPage() {
-        bulletinManager.backgroundColor = bgColor
+        addPageBulletinManager.backgroundColor = bgColor
         addPage.appearance.actionButtonColor = accentBGColor
         addPage.appearance.actionButtonBorderColor = .white
         addPage.appearance.actionButtonBorderWidth = 2
@@ -158,7 +163,7 @@ class TaskViewController: UITableViewController{
     }
     
     func setUpEditPage() {
-        bulletinManager2.backgroundColor = bgColor
+        editPageBulletinManager.backgroundColor = bgColor
         editPage.appearance.actionButtonColor = accentBGColor
         editPage.appearance.titleTextColor = .white
         editPage.textField.textColor = accentBGColor
@@ -173,6 +178,31 @@ class TaskViewController: UITableViewController{
         editPage.appearance.alternativeButtonTitleColor = .white
     }
 
+    func setUpConfirmPage() {
+        confirmPage.descriptionText = "Are you sure you want to clear all tasks?"
+        confirmPage.actionButtonTitle = "Yes"
+        confirmPage.alternativeButtonTitle = "No"
+        confirmPage.appearance.actionButtonBorderColor = .white
+        confirmPage.appearance.actionButtonBorderWidth = 2
+        confirmPage.appearance.actionButtonCornerRadius = 5
+        confirmPage.appearance.alternativeButtonTitleColor = .white
+        clearAllConfirmBulletinManager.backgroundColor = bgColor
+        confirmPage.appearance.actionButtonColor = accentBGColor
+        confirmPage.appearance.titleTextColor = .white
+        confirmPage.appearance.descriptionTextColor = .white
+        confirmPage.isDismissable = false
+        confirmPage.actionHandler = { (item:BLTNActionItem) in
+            self.items.removeAll()
+            self.dueDate.removeAll()
+            self.Save()
+            self.tableView.reloadData()
+            self.clearAllConfirmBulletinManager.dismissBulletin()
+        }
+        confirmPage.alternativeHandler = { (item:BLTNActionItem) in
+            self.clearAllConfirmBulletinManager.dismissBulletin()
+        }
+        
+    }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
@@ -224,7 +254,7 @@ class TaskViewController: UITableViewController{
                 self.items.remove(at: indexPath.row)
                 self.items.insert(task, at: indexPath.row)
             }
-            self.bulletinManager2.displayNextItem()
+            self.editPageBulletinManager.displayNextItem()
             
             let dateFormat = DateFormatter()
             dateFormat.dateFormat = "MM-dd-YY"
@@ -236,16 +266,16 @@ class TaskViewController: UITableViewController{
                 self.dueDate.remove(at: indexPath.row)
                 self.dueDate.insert(dateString, at: indexPath.row)
                 self.Save()
-                self.bulletinManager2.dismissBulletin()
+                self.editPageBulletinManager.dismissBulletin()
                 tableView.reloadData()
             }
             
         }
         editPage.alternativeHandler = { (item:BLTNActionItem) in
-            self.bulletinManager2.dismissBulletin()
+            self.editPageBulletinManager.dismissBulletin()
             tableView.deselectRow(at: indexPath, animated: false)
         }
-        bulletinManager2.showBulletin(above: self)
+        editPageBulletinManager.showBulletin(above: self)
     }
     
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
