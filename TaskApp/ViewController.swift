@@ -220,8 +220,9 @@ class TaskViewController: UITableViewController{
         myCell.timeLabel.textColor = textColor
         myCell.nameLabel.textColor = textColor
         myCell.nameLabel.numberOfLines = 2
-        myCell.actionButton.setTitleColor(textColor, for: .normal)
-        myCell.actionButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        myCell.actionButton.isUserInteractionEnabled = true
+        //myCell.actionButton.setTitleColor(textColor, for: .normal)
+        //myCell.actionButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         return myCell
     }
     

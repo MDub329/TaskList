@@ -86,12 +86,22 @@ class MyCell: UITableViewCell {
         return textLabel
     }()
     
-    let actionButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Finished", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    } ()
+//    let actionButton: UIButton = {
+//        let button = UIButton(type: .system)
+//        let btnImage = UIImage(named: "Checkmark")
+//        button.setImage(btnImage, for: .normal)
+//        //button.setTitle("Finished", for: .normal)
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        return button
+//    }()
+    
+    let actionButton: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        let btnImage = UIImage(named: "Checkmark")
+        image.image = btnImage
+        return image
+    }()
     
     let floatView: UIView = {
         let viewFloat = UIView()
@@ -109,14 +119,18 @@ class MyCell: UITableViewCell {
         floatView.addSubview(timeLabel)
         floatView.addSubview(actionButton)
         
-        actionButton.addTarget(self, action: #selector(MyCell.handleAction), for: .touchUpInside)
+        //actionButton.addTarget(self, action: #selector(MyCell.handleAction), for: .touchUpInside)
+        
+        let tapReconizer = UITapGestureRecognizer(target: self, action: #selector(MyCell.handleAction))
+        actionButton.addGestureRecognizer(tapReconizer)
         
         floatView.anchor(top: self.topAnchor, leading: self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor,padding: .init(top: 10, left: 25, bottom: 10, right: 25))
         nameLabel.anchor(top: floatView.topAnchor, leading: floatView.leadingAnchor, bottom: floatView.bottomAnchor, trailing: nil, padding: .init(top: 5, left: 15, bottom: 5, right: 0),size: .init(width: 100, height: 40))
         //timeLabel.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 5, left: 0, bottom: 5, right: 0))
         timeLabel.centerXAnchor.constraint(equalTo: floatView.centerXAnchor).isActive = true
         timeLabel.centerYAnchor.constraint(equalTo: floatView.centerYAnchor).isActive = true
-        actionButton.anchor(top: floatView.topAnchor, leading: nil, bottom: floatView.bottomAnchor, trailing: floatView.trailingAnchor, padding: .init(top: 5, left: 0, bottom: 5, right: 15))
+        actionButton.anchor(top: nil, leading: nil, bottom: nil, trailing: floatView.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 15))
+        actionButton.centerYAnchor.constraint(equalTo: floatView.centerYAnchor).isActive = true
     }
     
     
